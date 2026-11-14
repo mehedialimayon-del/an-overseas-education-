@@ -1,0 +1,393 @@
+/* A&N Overseas management editorial | 2026-11-07.
+   Keep the existing dark/orange/white theme and mobile page layout. */
+#app .an-about-v3 .an-manager-position{display:none!important}
+#app .an-about-v3 .an-manager-information{
+  gap:clamp(4px,.58vh,7px)!important;justify-content:flex-start!important;
+  scrollbar-width:thin;scrollbar-color:#b77736 transparent;
+}
+#app .an-about-v3 .an-manager-career{min-width:0}
+#app .an-about-v3 .an-manager-career p{
+  margin:2px 0 0!important;color:#edd8c2!important;
+  font-size:clamp(10px,.88vw,12px)!important;line-height:1.3!important;
+  overflow-wrap:anywhere;
+}
+#app .an-about-v3 .an-manager-quote{
+  position:relative;min-width:0;margin:1px 0!important;
+  padding:9px 11px 10px 29px!important;
+  border:1px solid rgba(255,172,74,.48);
+  border-left:3px solid #ff992e;
+  border-radius:13px;
+  background:linear-gradient(127deg,rgba(84,44,15,.48),rgba(15,19,28,.76));
+  box-shadow:inset 0 1px 0 rgba(255,205,136,.12),0 6px 20px rgba(0,0,0,.16);
+}
+#app .an-about-v3 .an-manager-quote-mark{
+  position:absolute;left:8px;top:2px;color:#ffad46;
+  font-family:Georgia,serif;font-size:31px;font-weight:900;line-height:1;
+}
+#app .an-about-v3 .an-manager-quote blockquote{
+  margin:0!important;color:#fff0dd!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-style:italic!important;font-size:clamp(10.5px,.96vw,12px)!important;
+  font-weight:500!important;line-height:1.34!important;letter-spacing:.06px;
+  overflow-wrap:anywhere;
+}
+#app .an-about-v3 .an-manager-support{min-width:0}
+#app .an-about-v3 .an-manager-support p{
+  margin:2px 0!important;line-height:1.27!important;
+  font-size:clamp(10px,.82vw,12px)!important;
+}
+#app .an-about-v3 .an-manager-assistance-label{
+  margin-top:auto!important;padding-top:3px;
+  color:#ffb45e!important;font-size:10px;font-weight:900;
+  letter-spacing:1px;
+}
+#app .an-about-v3 .an-manager-contacts{
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:6px!important;width:100%;margin-top:1px!important;
+}
+#app .an-about-v3 .an-manager-contacts .an-manager-contact{
+  display:flex!important;align-items:center!important;
+  min-width:0!important;width:100%!important;max-width:100%!important;
+  flex:none!important;min-height:36px!important;
+  padding:6px 8px!important;border-radius:10px!important;
+  box-sizing:border-box!important;gap:8px!important;
+}
+#app .an-about-v3 .an-manager-contact span:not(.an-linkedin-mark):not(.an-facebook-mark){
+  min-width:0!important;overflow-wrap:anywhere;
+}
+#app .an-about-v3 .an-manager-contact small{
+  font-size:9px!important;line-height:1.05!important;letter-spacing:.2px;
+}
+#app .an-about-v3 .an-manager-contact b{
+  display:block;font-size:clamp(9px,.8vw,11px)!important;
+  line-height:1.18!important;overflow-wrap:anywhere;
+}
+#app .an-about-v3 .an-manager-facebook{
+  background:#17223b!important;border-color:#385c91!important;
+}
+#app .an-about-v3 .an-facebook-mark{
+  flex:0 0 22px;display:inline-grid;place-items:center;
+  width:22px;height:22px;border-radius:5px;
+  background:#1877f2;color:#fff;font:bold 19px Arial,sans-serif;
+}
+#app .an-about-v3 .an-manager-linkedin{
+  background:#161c2a!important;border-color:#476787!important;
+}
+#app .an-about-v3 .an-manager-actions{
+  margin-top:4px!important;padding-top:3px!important;flex:0 0 auto!important;
+}
+/* Read More: an intentional literary quotation, not an ordinary text paragraph.
+   Preserve portrait, flags and the existing responsive one-screen hero. */
+body.an-about-details-mode #app .an2-founder-quote blockquote,
+#app .an2-founder-quote blockquote{
+  padding:9px 12px 10px 15px!important;
+  border:1px solid rgba(255,166,75,.44)!important;
+  border-left:3px solid #ff9b37!important;
+  border-radius:14px!important;
+  background:linear-gradient(125deg,rgba(91,53,25,.4),rgba(12,18,28,.57))!important;
+  box-shadow:inset 0 1px 0 rgba(255,209,148,.11),0 5px 17px rgba(0,0,0,.12)!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-style:italic!important;font-weight:500!important;
+  color:#fff0df!important;letter-spacing:.08px!important;
+}
+@media(min-width:981px){
+  #app .an-about-v3 .an-manager-information{padding:2px 3px!important}
+  #app .an-about-v3 .an-manager-career p{font-size:clamp(9.5px,.84vw,11px)!important}
+  #app .an-about-v3 .an-manager-quote{padding:7px 9px 8px 25px!important}
+  #app .an-about-v3 .an-manager-quote blockquote{
+    font-size:clamp(10px,.82vw,11.5px)!important;line-height:1.27!important;
+  }
+  #app .an-about-v3 .an-manager-contacts .an-manager-contact{min-height:32px!important;padding:4px 6px!important}
+}
+@media(max-width:800px){
+  #app .an-about-v3 .an-manager-information{height:auto!important;max-height:none!important;overflow:visible!important}
+  #app .an-about-v3 .an-manager-quote blockquote{font-size:12px!important;line-height:1.45!important}
+  #app .an-about-v3 .an-manager-career p{font-size:11px!important}
+  #app .an-about-v3 .an-manager-contacts{gap:6px!important}
+  #app .an-about-v3 .an-manager-contacts .an-manager-contact{min-height:39px!important}
+  body.an-about-details-mode #app .an2-founder-quote blockquote,
+  #app .an2-founder-quote blockquote{
+    padding:8px 9px 9px 11px!important;
+    border-radius:12px!important;
+  }
+}
+@media(max-width:380px){
+ #app .an-about-v3 .an-manager-contact b{font-size:9px!important}
+ #app .an-about-v3 .an-manager-contacts .an-manager-contact{gap:4px!important;padding:5px 4px!important}
+}
+
+/* Desktop fixed-frame management: all details, contact cards and actions visible without inner scrolling.
+   Deliberately scoped to About management; mobile layout and the founder story are untouched. */
+#app .an-about-v3 .an-manager-quote-emphasis{
+ color:#ffad47!important;font-weight:800!important;font-style:italic!important;
+ text-shadow:0 0 9px rgba(255,155,36,.16);
+}
+@media(min-width:801px){
+ body.an-about-locked #app .an-about-v3 .an-manager-card,
+ body.an-about-locked #app .an-about-v3 .an-manager-main{
+   min-height:0!important;overflow:hidden!important;
+ }
+ body.an-about-locked #app .an-about-v3 .an-manager-information{
+   display:flex!important;flex-direction:column!important;
+   justify-content:flex-start!important;align-items:stretch!important;
+   height:100%!important;min-height:0!important;max-height:100%!important;
+   overflow:hidden!important;overflow-y:hidden!important;overflow-x:hidden!important;
+   scrollbar-width:none!important;overscroll-behavior:auto!important;
+   gap:clamp(2px,.38vh,5px)!important;padding:1px 1px 0!important;
+ }
+ #app .an-about-v3 .an-manager-information>*{min-width:0;flex-shrink:0}
+ #app .an-about-v3 .an-manager-name-box h3{
+   font-size:clamp(15px,1.47vw,20px)!important;line-height:1.09!important;
+ }
+ #app .an-about-v3 .an-manager-career .an-manager-label{
+   font-size:clamp(8px,.69vw,9px)!important;line-height:1.08!important;
+ }
+ #app .an-about-v3 .an-manager-career p{
+   margin:1px 0 0!important;font-size:clamp(9px,.75vw,10.5px)!important;
+   line-height:1.17!important;
+ }
+ #app .an-about-v3 .an-manager-quote{
+   margin:0!important;padding:6px 8px 6px 23px!important;
+   border-radius:10px!important;
+ }
+ #app .an-about-v3 .an-manager-quote-mark{font-size:25px!important;left:6px!important;top:1px!important}
+ #app .an-about-v3 .an-manager-quote blockquote{
+   font-size:clamp(9.3px,.77vw,10.7px)!important;line-height:1.22!important;
+ }
+ #app .an-about-v3 .an-manager-contacts{
+   flex:0 0 auto!important;margin-top:auto!important;
+   grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   gap:4px!important;
+ }
+ #app .an-about-v3 .an-manager-contacts .an-manager-contact{
+   min-height:28px!important;padding:3px 6px!important;gap:5px!important;
+ }
+ #app .an-about-v3 .an-manager-contact small{font-size:8px!important;line-height:1!important}
+ #app .an-about-v3 .an-manager-contact b{
+   font-size:clamp(8px,.72vw,10px)!important;line-height:1.12!important;
+ }
+ #app .an-about-v3 .an-manager-actions{
+   flex:0 0 auto!important;margin-top:1px!important;padding-top:0!important;gap:4px!important;
+ }
+ #app .an-about-v3 .an-manager-actions .an-manager-action{
+   min-height:24px!important;padding:3px 7px!important;line-height:1.12!important;
+ }
+}
+@media(min-width:801px) and (max-height:700px){
+ #app .an-about-v3 .an-manager-name-box h3{font-size:clamp(14px,1.27vw,17px)!important}
+ #app .an-about-v3 .an-manager-career p{font-size:9px!important;line-height:1.1!important}
+ #app .an-about-v3 .an-manager-quote{padding:4px 7px 4px 20px!important}
+ #app .an-about-v3 .an-manager-quote blockquote{font-size:9px!important;line-height:1.15!important}
+ #app .an-about-v3 .an-manager-contacts .an-manager-contact{min-height:25px!important;padding:2px 5px!important}
+ #app .an-about-v3 .an-manager-actions .an-manager-action{min-height:22px!important;padding:2px 5px!important}
+}
+
+/* 2026-11-07 management polish v3: expand the quotation into the intentionally spare space.
+   No new page scroll; preserve portrait, header, theme and about-page layout. */
+#app .an-about-v3 .an-manager-quote-end{
+ display:inline!important;color:#ffae49!important;font:900 1.45em/.7 Georgia,'Times New Roman',serif!important;
+ vertical-align:-.18em;margin-left:3px;text-shadow:0 0 10px #ff9d2740;
+}
+#app .an-about-v3 .an-manager-contact{
+ position:relative!important;isolation:isolate;
+ border:1px solid rgba(255,166,74,.58)!important;
+ background:linear-gradient(115deg,rgba(63,36,16,.82),rgba(14,21,33,.96))!important;
+ box-shadow:inset 0 1px rgba(255,207,131,.15),0 3px 10px rgba(0,0,0,.2)!important;
+ transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease!important;
+}
+#app .an-about-v3 .an-manager-contact:hover,
+#app .an-about-v3 .an-manager-contact:focus-visible{
+ transform:translateY(-1px)!important;border-color:#ffd292!important;
+ box-shadow:0 4px 15px rgba(255,146,32,.25),inset 0 1px rgba(255,207,131,.3)!important;
+}
+#app .an-about-v3 .an-manager-linkedin{
+ border-color:#467dae!important;background:linear-gradient(125deg,#15314b,#101923)!important;
+}
+#app .an-about-v3 .an-manager-facebook{
+ border-color:#4779bd!important;background:linear-gradient(125deg,#17345a,#101d33)!important;
+}
+#app .an-about-v3 .an-facebook-mark{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ flex:0 0 23px!important;width:23px!important;height:23px!important;border-radius:7px!important;
+ background:linear-gradient(135deg,#2992ff,#1160cc)!important;color:#fff!important;
+ box-shadow:0 2px 7px rgba(27,112,226,.35)!important;
+}
+#app .an-about-v3 .an-facebook-mark svg{display:block!important;width:17px!important;height:17px!important}
+#app .an-about-v3 .an-manager-action{
+ border-radius:999px!important;letter-spacing:.3px!important;
+ box-shadow:inset 0 1px rgba(255,240,213,.28),0 4px 12px rgba(0,0,0,.26)!important;
+ transition:transform .2s ease,box-shadow .2s ease!important;
+}
+#app .an-about-v3 .an-manager-action:hover,
+#app .an-about-v3 .an-manager-action:focus-visible{
+ transform:translateY(-2px)!important;box-shadow:0 5px 15px rgba(252,142,31,.33)!important;
+}
+#app .an-about-v3 .an-manager-action.an-journey-cta{
+ background:linear-gradient(100deg,#ffc564,#ff8a23 65%,#fa6d07)!important;
+ color:#221305!important;border-color:#ffc77e!important;
+}
+#app .an-about-v3 .an-manager-action.an-admin-entry{
+ background:linear-gradient(110deg,#291c14,#131821)!important;
+ color:#fff5e8!important;border-color:#dd9350!important;
+}
+@media(min-width:801px){
+ body.an-about-locked #app .an-about-v3 .an-manager-information{
+   gap:clamp(4px,.65vh,8px)!important;
+ }
+ #app .an-about-v3 .an-manager-name-box h3{
+   font-size:clamp(18px,1.66vw,24px)!important;line-height:1.1!important;
+   letter-spacing:-.18px!important;font-weight:950!important;
+ }
+ #app .an-about-v3 .an-manager-name-box .an-manager-label{
+   font-size:10px!important;letter-spacing:.7px!important;
+ }
+ #app .an-about-v3 .an-manager-career .an-manager-label{
+   font-size:clamp(9px,.78vw,10px)!important;
+ }
+ #app .an-about-v3 .an-manager-career p{
+   font-size:clamp(10px,.83vw,11.5px)!important;line-height:1.22!important;
+ }
+ #app .an-about-v3 .an-manager-quote{
+   display:flex!important;align-items:center!important;justify-content:flex-start!important;
+   flex:1 1 auto!important;min-height:0!important;
+   margin:3px 0!important;padding:10px 12px 10px 31px!important;
+   border-radius:14px!important;
+   background:linear-gradient(130deg,rgba(68,38,20,.82),rgba(18,22,32,.9))!important;
+   box-shadow:inset 0 1px rgba(255,200,120,.18),0 4px 14px rgba(0,0,0,.22)!important;
+ }
+ #app .an-about-v3 .an-manager-quote-mark{
+   font-size:35px!important;left:8px!important;top:5px!important;
+ }
+ #app .an-about-v3 .an-manager-quote blockquote{
+   font-size:clamp(11px,.94vw,13px)!important;
+   line-height:1.37!important;letter-spacing:.02px!important;
+ }
+ #app .an-about-v3 .an-manager-contacts{
+   margin-top:3px!important;gap:5px!important;
+ }
+ #app .an-about-v3 .an-manager-contacts .an-manager-contact{
+   min-height:33px!important;padding:4px 7px!important;gap:6px!important;border-radius:10px!important;
+ }
+ #app .an-about-v3 .an-manager-contact small{font-size:8.5px!important}
+ #app .an-about-v3 .an-manager-contact b{
+   font-size:clamp(8.5px,.77vw,10.5px)!important;line-height:1.15!important;
+ }
+ #app .an-about-v3 .an-manager-actions{
+   margin-top:3px!important;gap:7px!important;
+ }
+ #app .an-about-v3 .an-manager-actions .an-manager-action{
+   min-height:28px!important;padding:5px 9px!important;
+   font-size:clamp(8px,.76vw,10.5px)!important;
+ }
+}
+@media(min-width:801px) and (max-height:700px){
+ #app .an-about-v3 .an-manager-name-box h3{
+   font-size:clamp(18px,1.55vw,21px)!important;
+ }
+ #app .an-about-v3 .an-manager-career p{font-size:10px!important;line-height:1.16!important}
+ #app .an-about-v3 .an-manager-quote{
+   margin:1px 0!important;padding:6px 8px 6px 23px!important;
+ }
+ #app .an-about-v3 .an-manager-quote blockquote{
+   font-size:clamp(10.5px,.84vw,11.5px)!important;line-height:1.23!important;
+ }
+ #app .an-about-v3 .an-manager-quote-mark{font-size:27px!important;left:5px!important;top:1px!important}
+ #app .an-about-v3 .an-manager-contacts .an-manager-contact{min-height:29px!important;padding:3px 5px!important}
+ #app .an-about-v3 .an-manager-actions .an-manager-action{min-height:24px!important;padding:3px 7px!important}
+}
+@media(max-width:800px){
+ #app .an-about-v3 .an-manager-quote-end{font-size:1.3em!important}
+ #app .an-about-v3 .an-facebook-mark svg{width:16px!important;height:16px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #app .an-about-v3 .an-manager-contact,#app .an-about-v3 .an-manager-action{transition:none!important}
+}
+
+/* About action hierarchy: compact inline links and one broad premium CTA. */
+#app .an-about-v3 .an-inline-heading{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:5px 8px!important}
+#app .an-about-v3 .an-inline-heading>h1,#app .an-about-v3 .an-inline-heading>h2{flex:1 1 auto!important;min-width:0!important;margin:0!important}
+#app .an-about-v3 .an-inline-readmore{display:inline-flex!important;align-items:center!important;flex:0 0 auto!important;color:#ff8900!important;font-size:clamp(8px,.72vw,10px)!important;font-weight:900!important;text-decoration:none!important;border-bottom:1px solid #ff7900!important;padding:4px 2px!important}
+#app .an-about-v3 .an-inline-readmore:hover,#app .an-about-v3 .an-inline-readmore:focus-visible{color:#fff!important;border-color:#fff!important}
+#app .an-about-v3 .an-about-intro-panel>.an2-readmore-separate{display:flex!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:5!important;width:100%!important;max-width:none!important;flex-direction:column!important;align-items:stretch!important;gap:5px!important;margin:7px 0 0!important;padding:6px 0 0!important;border-top:1px solid #ff790055!important;flex:0 0 auto!important}
+#app .an-about-v3 .an-about-intro-panel>.an2-readmore-separate .an-about-readmore{display:flex!important;visibility:visible!important;pointer-events:auto!important;width:100%!important;min-height:clamp(38px,4.7vh,48px)!important;align-items:center!important;justify-content:center!important;gap:12px!important;margin:0!important;padding:6px 10px!important;border:1.5px solid #ffba56!important;border-radius:12px!important;background:linear-gradient(105deg,#ffb32f,#ff7900 65%,#e55b00)!important;color:#1a0e04!important;font-size:clamp(11px,.95vw,15px)!important;font-weight:950!important;letter-spacing:1px!important;text-decoration:none!important;box-shadow:0 5px 18px #ff79003c!important}
+#app .an-about-v3 .an-readmore-tagline{display:block!important;color:#fff!important;font-size:clamp(8px,.65vw,10px)!important;line-height:1.24!important;text-align:center!important}
+#app .an-about-v3 .an-about-intro-panel>.an2-readmore-separate .an-about-readmore:hover{background:linear-gradient(105deg,#ffc44a,#ff8200)!important;box-shadow:0 5px 22px #ff790075!important}
+#app .an-about-v3 .an-manager-career p{color:#fff!important}
+#app .an-about-v3 .an-manager-career .an-manager-career-key{color:#ff9200!important;font-weight:850!important}
+#app .an-about-v3 .an-manager-career .an-manager-label{color:#ff7900!important}
+
+/* 2026-11-08 v16 — final About storytelling layout. */
+#app .an-about-v3 .an-about-intro-panel{
+ display:flex!important;flex-direction:column!important;gap:clamp(8px,.85vh,12px)!important;
+ align-items:stretch!important;min-height:0!important;
+}
+#app .an-about-v3 .an-about-intro-panel>.an2-about-box,
+#app .an-about-v3 .an-about-intro-panel>.an-vision-inline{
+ display:flex!important;flex-direction:column!important;justify-content:flex-start!important;
+ width:100%!important;min-height:0!important;flex:1 1 0!important;
+ margin:0!important;padding:clamp(12px,1.45vw,19px)!important;
+ border:1px solid rgba(255,126,13,.72)!important;border-radius:17px!important;
+ background:linear-gradient(125deg,#231a15,#0e131c)!important;
+ box-shadow:inset 0 1px rgba(255,203,136,.13),0 5px 15px rgba(0,0,0,.17)!important;
+}
+#app .an-about-v3 .an-about-intro-panel>.an2-about-box :is(h1,p),
+#app .an-about-v3 .an-about-intro-panel>.an-vision-inline :is(h2,p){max-width:100%!important}
+#app .an-about-v3 .an-about-intro-panel>.an2-about-box :is(h1),
+#app .an-about-v3 .an-about-intro-panel>.an-vision-inline :is(h2){
+ flex:0 0 auto!important;margin:0 0 7px!important;line-height:1.14!important;
+}
+#app .an-about-v3 .an-about-intro-panel :is(.an2-about-box,.an-vision-inline)>p{
+ margin:0!important;flex:1 1 auto!important;
+ font-size:clamp(10px,.94vw,13px)!important;line-height:1.49!important;
+ color:#fff!important;overflow:visible!important;
+}
+#app .an-about-v3 .an-about-intro-panel .an-end-readmore{
+ display:inline!important;white-space:nowrap!important;position:static!important;
+ padding:0 1px!important;margin-left:2px!important;
+ font-size:.91em!important;font-weight:900!important;letter-spacing:.18px!important;
+ border:0!important;border-bottom:1px solid #ff8a00!important;
+ border-radius:0!important;background:transparent!important;
+ color:#ff9200!important;text-decoration:none!important;
+}
+#app .an-about-v3 .an-about-intro-panel .an-end-readmore:hover,
+#app .an-about-v3 .an-about-intro-panel .an-end-readmore:focus-visible{
+ color:#fff!important;border-color:#fff!important;text-shadow:0 0 8px #ff7c00!important;
+}
+#app .an-about-v3 .an-about-intro-panel>.an2-readmore-separate{
+ flex:0 0 auto!important;align-self:stretch!important;margin-top:auto!important;
+ padding-top:7px!important;gap:3px!important;
+}
+#app .an-about-v3 .an-about-intro-panel>.an2-readmore-separate .an-about-readmore{
+ min-height:clamp(42px,5.4vh,54px)!important;
+ border:2px solid #ffbc55!important;
+ border-radius:15px!important;
+ background:linear-gradient(110deg,#ffb93b 0%,#ff7900 60%,#e65700 100%)!important;
+ box-shadow:0 7px 19px rgba(255,124,0,.3),inset 0 1px rgba(255,255,255,.3)!important;
+}
+#app .an-about-v3 .an-about-intro-panel .an-readmore-tagline{
+ margin-top:1px!important;color:#fff!important;
+}
+#app .an-about-v3 .an-manager-career .an-manager-label{color:#fff!important}
+#app .an-about-v3 .an-manager-career p{color:#fff!important}
+#app .an-about-v3 .an-manager-career .an-career-bau{color:#ff8200!important;font-weight:900!important}
+#app .an-about-v3 .an-manager-career .an-career-klust{color:#fff!important;font-weight:800!important}
+#app .an-about-v3 .an-manager-career .an-career-upm{color:#ffc078!important;font-weight:850!important}
+#app .an-about-v3 .an-manager-career .an-career-msc{color:#35d78c!important;font-weight:850!important}
+#app .an-about-v3 .an-manager-career .an-career-research{color:#8ec8ff!important;font-weight:850!important}
+@media(min-width:801px) and (max-height:720px){
+ #app .an-about-v3 .an-about-intro-panel{gap:5px!important}
+ #app .an-about-v3 .an-about-intro-panel>.an2-about-box,
+ #app .an-about-v3 .an-about-intro-panel>.an-vision-inline{
+   padding:clamp(8px,.8vh,12px)!important;
+ }
+ #app .an-about-v3 .an-about-intro-panel :is(.an2-about-box,.an-vision-inline)>p{
+   font-size:clamp(9px,.78vw,11px)!important;line-height:1.3!important;
+ }
+}
+@media(max-width:800px){
+ #app .an-about-v3 .an-about-intro-panel>.an2-about-box,
+ #app .an-about-v3 .an-about-intro-panel>.an-vision-inline{flex:0 0 auto!important;min-height:0!important}
+ #app .an-about-v3 .an-about-intro-panel :is(.an2-about-box,.an-vision-inline)>p{
+  font-size:clamp(12px,2.8vw,14px)!important;line-height:1.45!important;
+ }
+}

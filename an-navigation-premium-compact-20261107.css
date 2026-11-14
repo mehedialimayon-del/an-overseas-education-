@@ -1,0 +1,217 @@
+/* A&N Overseas — compact premium navigation only.
+   Preserves header size, existing responsive menu, login/apply positioning,
+   favourite/search controls and mobile brand typography. */
+.top .links .an-nav-icon,
+.top .an-desktop-login .an-nav-icon{
+  display:inline-block;vertical-align:middle;flex:0 0 auto;
+  width:12px;height:12px;color:#ffad25;
+  stroke:currentColor;fill:none;stroke-width:2.05;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+@media (min-width:801px){
+  html body .top .links a{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    gap:4px!important;white-space:nowrap!important;
+    padding:5px clamp(4px,.42vw,7px)!important;
+    min-height:25px!important;max-height:28px!important;
+    border:1px solid #b67325!important;border-radius:999px!important;
+    background:linear-gradient(180deg,#1d1b1a 0%,#090b0e 100%)!important;
+    color:#fef9f3!important;
+    box-shadow:inset 0 1px 0 #ffbd5630,0 1px 4px #0006!important;
+    font-size:clamp(8px,.72vw,10.5px)!important;
+    font-weight:750!important;letter-spacing:0!important;line-height:1.1!important;
+    transition:background .15s,border-color .15s,box-shadow .15s!important;
+  }
+  html body .top .links a:hover,
+  html body .top .links a.current,
+  html body .top .links a[aria-current="page"]{
+    color:#fff!important;border-color:#ffae45!important;
+    background:linear-gradient(180deg,#ff9e24 0%,#dd5f00 100%)!important;
+    box-shadow:inset 0 1px 0 #fff4,0 0 9px #ff851440!important;
+  }
+  html body .top .links a:hover .an-nav-icon,
+  html body .top .links a.current .an-nav-icon,
+  html body .top .links a[aria-current="page"] .an-nav-icon{color:#fff!important}
+  html body .top .links a .an-nav-icon{width:11px;height:11px}
+  html body .top .an-desktop-login .an-nav-icon{
+    width:12px;height:12px;margin-right:4px;color:#ffae30;
+  }
+  /* The typed company name becomes a little larger on laptop/desktop only. */
+  html body .top .brand-copy strong{
+    font-size:clamp(20px,1.52vw,23px)!important;line-height:1.1!important;
+  }
+  html body .top .brand-copy small{
+    font-size:8.5px!important;letter-spacing:.48px!important;line-height:1.2!important;
+  }
+}
+@media (min-width:1180px){
+  /* Provide room for the slightly larger company name without enlarging nav pills. */
+  html body .top .wrap{
+    grid-template-columns:minmax(242px,260px) minmax(0,1fr) 37px 40px 108px!important;
+  }
+}
+@media (min-width:801px) and (max-width:1179px){
+  html body .top .brand-copy strong{font-size:21px!important}
+}
+@media (max-width:800px){
+  /* Only the links inside the existing three-dot menu change appearance. */
+  html body .top .links.open a{
+    display:flex!important;align-items:center!important;justify-content:flex-start!important;
+    gap:9px!important;margin:5px 10px!important;
+    min-height:32px!important;padding:7px 11px!important;
+    border:1px solid #9b5e24!important;border-radius:12px!important;
+    background:linear-gradient(180deg,#211b17,#101114)!important;
+    color:#fff9f3!important;box-shadow:inset 0 1px 0 #ffc1721c!important;
+    font-size:12px!important;font-weight:750!important;letter-spacing:.1px!important;
+  }
+  html body .top .links.open a .an-nav-icon{
+    width:15px;height:15px;color:#ffaf2e!important;
+  }
+  html body .top .links.open a.current,
+  html body .top .links.open a:hover,
+  html body .top .links.open a[aria-current="page"]{
+    color:#fff!important;border-color:#ffc267!important;
+    background:linear-gradient(90deg,#e96807,#a93d00)!important;
+  }
+  html body .top .links.open a.current .an-nav-icon,
+  html body .top .links.open a:hover .an-nav-icon,
+  html body .top .links.open a[aria-current="page"] .an-nav-icon{color:#fff!important}
+}
+
+/* 2026-11-07 — glass-polished light sweep, confined to navigation pills. */
+html body .top .links a{
+  position:relative!important;isolation:isolate!important;overflow:hidden!important;
+  background-image:
+    linear-gradient(115deg,rgba(255,255,255,.15) 0%,rgba(255,255,255,.045) 30%,transparent 51%),
+    linear-gradient(180deg,#24201c 0%,#0c0d11 100%)!important;
+  box-shadow:inset 0 1px 0 rgba(255,231,191,.38),inset 0 -1px 0 rgba(0,0,0,.55),0 2px 7px rgba(0,0,0,.5)!important;
+}
+html body .top .links a::before{
+  content:""!important;position:absolute!important;z-index:0!important;
+  top:-65%!important;left:-110%!important;width:52%!important;height:235%!important;
+  border-radius:50%!important;transform:skewX(-24deg)!important;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.06) 24%,rgba(255,241,207,.43) 50%,rgba(255,255,255,.06) 76%,transparent)!important;
+  pointer-events:none!important;animation:anNavGlassSweep 5.8s ease-in-out infinite!important;
+}
+html body .top .links a .an-nav-icon{position:relative!important;z-index:1!important}
+html body .top .links a:hover,
+html body .top .links a.current,
+html body .top .links a[aria-current="page"]{
+  background-image:linear-gradient(115deg,rgba(255,255,255,.22),transparent 55%),linear-gradient(180deg,#ffa937,#d65a00)!important;
+}
+@keyframes anNavGlassSweep{
+  0%,17%{left:-110%;opacity:0}
+  23%{opacity:1}
+  48%{left:155%;opacity:1}
+  52%,100%{left:155%;opacity:0}
+}
+@media (max-width:800px){
+  /* Enlarge only the company lettering on phones; preserve logo, actions and header layout. */
+  html body .top .brand-copy strong{
+    font-size:clamp(15px,3.8vw,19px)!important;
+    letter-spacing:-.2px!important;line-height:1.13!important;
+  }
+  html body .top .brand-copy small{
+    font-size:clamp(6.6px,1.75vw,8px)!important;
+    letter-spacing:0!important;line-height:1.25!important;
+  }
+  html body .top .links.open a{
+    background-image:linear-gradient(115deg,rgba(255,255,255,.13),transparent 55%),linear-gradient(180deg,#29211b,#101114)!important;
+  }
+  html body .top .links.open a.current,
+  html body .top .links.open a:hover,
+  html body .top .links.open a[aria-current="page"]{
+    background-image:linear-gradient(115deg,rgba(255,255,255,.22),transparent 55%),linear-gradient(90deg,#e96807,#a93d00)!important;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  html body .top .links a::before{animation:none!important;left:15%!important;opacity:.35!important}
+}
+
+/* 2026-11-07 correction: mobile subtitle must be more legible, not compressed.
+   Do not change menu button dimensions, spacing, header controls or other content. */
+@media(max-width:800px){
+ html body .top .brand-copy small{
+   font-size:clamp(8px,2.25vw,9.5px)!important;
+   letter-spacing:.05px!important;line-height:1.2!important;
+   font-weight:650!important;
+   transform:none!important;
+ }
+ html body .top .brand-copy strong{
+   font-size:clamp(16px,4.05vw,19px)!important;
+   letter-spacing:-.3px!important;
+ }
+ /* Make the original glass look visible even between animated sweeps. */
+ html body .top .links.open a{
+   background-image:
+    linear-gradient(160deg,rgba(255,255,255,.21) 0%,rgba(255,255,255,.07) 23%,transparent 52%),
+    linear-gradient(180deg,#2a241e,#0e1014)!important;
+   box-shadow:inset 0 1px 0 rgba(255,236,198,.48),inset 0 -1px 0 rgba(0,0,0,.65),0 2px 9px #0008!important;
+ }
+ html body .top .links.open a.current,
+ html body .top .links.open a:hover{
+   background-image:linear-gradient(155deg,rgba(255,255,255,.3),transparent 53%),linear-gradient(180deg,#ff9e2f,#c94a00)!important;
+ }
+}
+@media(min-width:801px){
+ html body .top .links a{
+  background-image:linear-gradient(160deg,rgba(255,255,255,.23),rgba(255,255,255,.06) 24%,transparent 53%),linear-gradient(180deg,#29231e,#0a0c10)!important;
+ }
+}
+
+/* Vivid deep-orange hover, focus, active, mobile menu. */
+html body .top .links a:hover,html body .top .links a:focus-visible,html body .top .links a.current,html body .top .links a[aria-current="page"],html body .top #links.open > a:hover,html body .top #links.open > a.current,html body .top #links.open > a:focus-visible{background:#ff7900!important;background-image:linear-gradient(180deg,#ff8800,#ef6200)!important;border-color:#ff7900!important;color:#fff!important;box-shadow:0 0 13px #ff790062,inset 0 1px #fff5!important}
+
+/* The phone menu floats above the page, with gaps open to page scrolling. */
+@media(max-width:800px){
+ html body .top:has(#links.open){
+  z-index:9999!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+ }
+ html body .top nav#links{
+  --an-menu-row:clamp(16px,calc((100svh - 108px) / 9),45px);
+  position:fixed!important;display:flex!important;
+  top:max(64px,calc((100svh - 9 * var(--an-menu-row) - 40px) / 2))!important;
+  left:50%!important;right:auto!important;bottom:auto!important;
+  width:min(82vw,380px)!important;height:auto!important;max-height:none!important;
+  margin:0!important;padding:0!important;
+  flex-direction:column!important;align-items:stretch!important;gap:5px!important;
+  overflow:visible!important;
+  background:none!important;border:0!important;box-shadow:none!important;
+  backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+  z-index:99999!important;pointer-events:none!important;
+  visibility:hidden!important;opacity:0!important;
+  transform:translate(-50%,-8px)!important;
+  transition:opacity .18s ease,transform .18s ease,visibility .18s!important;
+ }
+ html body .top nav#links.open{
+  visibility:visible!important;opacity:1!important;transform:translateX(-50%)!important;
+ }
+ html body .top nav#links > :not(a),
+ html body .top nav#links > a > .an-nav-icon,
+ html body .top nav#links::before,html body .top nav#links::after,
+ html body .top nav#links > a::before,html body .top nav#links > a::after{
+  display:none!important;content:none!important;
+ }
+ html body .top nav#links.open > a{
+  pointer-events:auto!important;touch-action:pan-y;
+  box-sizing:border-box!important;flex:0 0 auto!important;
+  display:flex!important;justify-content:center!important;align-items:center!important;
+  text-align:center!important;width:100%!important;
+  height:var(--an-menu-row)!important;min-height:0!important;
+  margin:0!important;padding:0 8px!important;
+  border:2px solid #e85c00!important;border-radius:16px!important;
+  color:#fff!important;font-size:clamp(12px,3.5vw,15px)!important;font-weight:850!important;
+  text-shadow:none!important;
+  background:linear-gradient(180deg,#2a211d,#101014)!important;
+  box-shadow:0 3px 11px #0009!important;
+ }
+ html body .top nav#links.open > a:is(.current,:focus-visible,[aria-current="page"]){
+  background:linear-gradient(180deg,#a43a00,#772900)!important;
+  border-color:#f26a00!important;
+ }
+}
+@media(max-width:800px) and (prefers-reduced-motion:reduce){
+ html body .top nav#links{transition:none!important}
+}

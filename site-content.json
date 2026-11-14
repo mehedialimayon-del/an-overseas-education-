@@ -1,0 +1,1797 @@
+{
+  "version": 2,
+  "ticker": "Malaysia admission guidance • Explore universities • Plan your application • Follow office-provided updates",
+  "heroLead": "Study in",
+  "heroAccent": "Malaysia.",
+  "heroDescription": "Your global future starts here. University selection, admission guidance and student support—all in one place.",
+  "aboutIntro": "Supporting students to discover and navigate international education opportunities.",
+  "universityOverrides": {},
+  "additionalUniversities": [
+    {
+      "id": "usm",
+      "name": "Universiti Sains Malaysia",
+      "short": "USM",
+      "country": "Malaysia",
+      "city": "Gelugor, Penang",
+      "kind": "Public",
+      "site": "https://www.usm.my",
+      "programs": [
+        "Science",
+        "Engineering",
+        "Health",
+        "Education"
+      ]
+    },
+    {
+      "id": "uitm",
+      "name": "Universiti Teknologi MARA",
+      "short": "UiTM",
+      "country": "Malaysia",
+      "city": "Shah Alam, Selangor",
+      "kind": "Public",
+      "site": "https://www.uitm.edu.my",
+      "programs": [
+        "Business",
+        "Engineering",
+        "Architecture",
+        "Technology"
+      ]
+    },
+    {
+      "id": "iium",
+      "name": "International Islamic University Malaysia",
+      "short": "IIUM",
+      "country": "Malaysia",
+      "city": "Gombak, Selangor",
+      "kind": "Public",
+      "site": "https://www.iium.edu.my",
+      "programs": [
+        "Engineering",
+        "Law",
+        "Economics",
+        "Education"
+      ]
+    },
+    {
+      "id": "uthm",
+      "name": "Universiti Tun Hussein Onn Malaysia",
+      "short": "UTHM",
+      "country": "Malaysia",
+      "city": "Batu Pahat, Johor",
+      "kind": "Public",
+      "site": "https://www.uthm.edu.my",
+      "programs": [
+        "Engineering",
+        "Technology"
+      ]
+    },
+    {
+      "id": "utem",
+      "name": "Universiti Teknikal Malaysia Melaka",
+      "short": "UTeM",
+      "country": "Malaysia",
+      "city": "Durian Tunggal, Melaka",
+      "kind": "Public",
+      "site": "https://www.utem.edu.my",
+      "programs": [
+        "Engineering",
+        "Computer Science",
+        "Technology"
+      ]
+    },
+    {
+      "id": "usim",
+      "name": "Universiti Sains Islam Malaysia",
+      "short": "USIM",
+      "country": "Malaysia",
+      "city": "Nilai, Negeri Sembilan",
+      "kind": "Public",
+      "site": "https://www.usim.edu.my",
+      "programs": [
+        "Science",
+        "Health",
+        "Economics"
+      ]
+    },
+    {
+      "id": "upsi",
+      "name": "Universiti Pendidikan Sultan Idris",
+      "short": "UPSI",
+      "country": "Malaysia",
+      "city": "Tanjong Malim, Perak",
+      "kind": "Public",
+      "site": "https://www.upsi.edu.my",
+      "programs": [
+        "Education",
+        "Science"
+      ]
+    },
+    {
+      "id": "umt",
+      "name": "Universiti Malaysia Terengganu",
+      "short": "UMT",
+      "country": "Malaysia",
+      "city": "Kuala Nerus, Terengganu",
+      "kind": "Public",
+      "site": "https://www.umt.edu.my",
+      "programs": [
+        "Aquaculture",
+        "Marine Science",
+        "Management"
+      ]
+    },
+    {
+      "id": "ums",
+      "name": "Universiti Malaysia Sabah",
+      "short": "UMS",
+      "country": "Malaysia",
+      "city": "Kota Kinabalu, Sabah",
+      "kind": "Public",
+      "site": "https://www.ums.edu.my",
+      "programs": [
+        "Science",
+        "Aquaculture",
+        "Business"
+      ]
+    },
+    {
+      "id": "umpsa",
+      "name": "Universiti Malaysia Pahang Al-Sultan Abdullah",
+      "short": "UMPSA",
+      "country": "Malaysia",
+      "city": "Pekan / Gambang, Pahang",
+      "kind": "Public",
+      "site": "https://www.umpsa.edu.my",
+      "programs": [
+        "Engineering",
+        "Technology"
+      ]
+    },
+    {
+      "id": "unimas",
+      "name": "Universiti Malaysia Sarawak",
+      "short": "UNIMAS",
+      "country": "Malaysia",
+      "city": "Kota Samarahan, Sarawak",
+      "kind": "Public",
+      "site": "https://www.unimas.my",
+      "programs": [
+        "Computer Science",
+        "Science",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "unimap",
+      "name": "Universiti Malaysia Perlis",
+      "short": "UniMAP",
+      "country": "Malaysia",
+      "city": "Arau, Perlis",
+      "kind": "Public",
+      "site": "https://www.unimap.edu.my",
+      "programs": [
+        "Engineering",
+        "Business",
+        "Technology"
+      ]
+    },
+    {
+      "id": "unisza",
+      "name": "Universiti Sultan Zainal Abidin",
+      "short": "UniSZA",
+      "country": "Malaysia",
+      "city": "Kuala Nerus, Terengganu",
+      "kind": "Public",
+      "site": "https://www.unisza.edu.my",
+      "programs": [
+        "Education",
+        "Health",
+        "Business"
+      ]
+    },
+    {
+      "id": "upnm",
+      "name": "Universiti Pertahanan Nasional Malaysia",
+      "short": "UPNM",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Public",
+      "site": "https://www.upnm.edu.my",
+      "programs": [
+        "Engineering",
+        "Science",
+        "Management"
+      ]
+    },
+    {
+      "id": "umk",
+      "name": "Universiti Malaysia Kelantan",
+      "short": "UMK",
+      "country": "Malaysia",
+      "city": "Bachok / Kota Bharu, Kelantan",
+      "kind": "Public",
+      "site": "https://www.umk.edu.my",
+      "programs": [
+        "Business",
+        "Technology",
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "id": "taylors",
+      "name": "Taylor's University",
+      "short": "Taylor's",
+      "country": "Malaysia",
+      "city": "Subang Jaya, Selangor",
+      "kind": "Private",
+      "site": "https://university.taylors.edu.my",
+      "programs": [
+        "Business",
+        "Hospitality",
+        "Computer Science"
+      ]
+    },
+    {
+      "id": "sunway",
+      "name": "Sunway University",
+      "short": "Sunway",
+      "country": "Malaysia",
+      "city": "Bandar Sunway, Selangor",
+      "kind": "Private",
+      "site": "https://sunwayuniversity.edu.my",
+      "programs": [
+        "Business",
+        "Computer Science",
+        "Science"
+      ]
+    },
+    {
+      "id": "ucsi",
+      "name": "UCSI University",
+      "short": "UCSI",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "site": "https://www.ucsiuniversity.edu.my",
+      "programs": [
+        "Business",
+        "Music",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "apu",
+      "name": "Asia Pacific University of Technology & Innovation",
+      "short": "APU",
+      "country": "Malaysia",
+      "city": "Bukit Jalil, Kuala Lumpur",
+      "kind": "Private",
+      "site": "https://www.apu.edu.my",
+      "programs": [
+        "Computer Science",
+        "Technology",
+        "Business"
+      ]
+    },
+    {
+      "id": "msu",
+      "name": "Management and Science University",
+      "short": "MSU",
+      "country": "Malaysia",
+      "city": "Shah Alam, Selangor",
+      "kind": "Private",
+      "site": "https://www.msu.edu.my",
+      "programs": [
+        "Health",
+        "Management",
+        "Business"
+      ]
+    },
+    {
+      "id": "mmu",
+      "name": "Multimedia University",
+      "short": "MMU",
+      "country": "Malaysia",
+      "city": "Cyberjaya / Melaka",
+      "kind": "Private",
+      "site": "https://www.mmu.edu.my",
+      "programs": [
+        "Computer Science",
+        "Communication",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "utp",
+      "name": "Universiti Teknologi PETRONAS",
+      "short": "UTP",
+      "country": "Malaysia",
+      "city": "Seri Iskandar, Perak",
+      "kind": "Private",
+      "site": "https://www.utp.edu.my",
+      "programs": [
+        "Engineering",
+        "Technology",
+        "Business",
+        "MBA in Energy Management",
+        "MSc in Applied Computing",
+        "MSc in Process Safety",
+        "MSc in Petroleum Engineering",
+        "MSc in Data Science"
+      ]
+    },
+    {
+      "id": "monash-my",
+      "name": "Monash University Malaysia",
+      "short": "Monash MY",
+      "country": "Malaysia",
+      "city": "Bandar Sunway, Selangor",
+      "kind": "Private",
+      "site": "https://www.monash.edu.my",
+      "programs": [
+        "Engineering",
+        "Business",
+        "Science"
+      ]
+    },
+    {
+      "id": "nottingham-my",
+      "name": "University of Nottingham Malaysia",
+      "short": "Nottingham MY",
+      "country": "Malaysia",
+      "city": "Semenyih, Selangor",
+      "kind": "Private",
+      "site": "https://www.nottingham.edu.my",
+      "programs": [
+        "Engineering",
+        "Business",
+        "Education"
+      ]
+    },
+    {
+      "id": "curtin-my",
+      "name": "Curtin University Malaysia",
+      "short": "Curtin MY",
+      "country": "Malaysia",
+      "city": "Miri, Sarawak",
+      "kind": "Private",
+      "site": "https://curtin.edu.my",
+      "programs": [
+        "Engineering",
+        "Business",
+        "Science"
+      ]
+    },
+    {
+      "id": "heriotwatt-my",
+      "name": "Heriot-Watt University Malaysia",
+      "short": "Heriot-Watt",
+      "country": "Malaysia",
+      "city": "Putrajaya",
+      "kind": "Private",
+      "site": "https://www.hw.ac.uk/malaysia",
+      "programs": [
+        "Engineering",
+        "Business"
+      ]
+    },
+    {
+      "id": "xiamen-my",
+      "name": "Xiamen University Malaysia",
+      "short": "Xiamen MY",
+      "country": "Malaysia",
+      "city": "Sepang, Selangor",
+      "kind": "Private",
+      "site": "https://www.xmu.edu.my",
+      "programs": [
+        "Business",
+        "Computer Science",
+        "Communication"
+      ]
+    },
+    {
+      "id": "inti",
+      "name": "INTI International University",
+      "short": "INTI",
+      "country": "Malaysia",
+      "city": "Nilai, Negeri Sembilan",
+      "kind": "Private",
+      "site": "https://newinti.edu.my",
+      "programs": [
+        "Business",
+        "Engineering",
+        "Computer Science"
+      ]
+    },
+    {
+      "id": "segi",
+      "name": "SEGi University",
+      "short": "SEGi",
+      "country": "Malaysia",
+      "city": "Kota Damansara, Selangor",
+      "kind": "Private",
+      "site": "https://www.segi.edu.my",
+      "programs": [
+        "Business",
+        "Education",
+        "Health"
+      ]
+    },
+    {
+      "id": "help",
+      "name": "HELP University",
+      "short": "HELP",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur / Selangor",
+      "kind": "Private",
+      "site": "https://university.help.edu.my",
+      "programs": [
+        "Business",
+        "Psychology",
+        "Education"
+      ]
+    },
+    {
+      "id": "mahsa",
+      "name": "MAHSA University",
+      "short": "MAHSA",
+      "country": "Malaysia",
+      "city": "Bandar Saujana Putra, Selangor",
+      "kind": "Private",
+      "site": "https://mahsa.edu.my",
+      "programs": [
+        "Health",
+        "Medicine",
+        "Business"
+      ]
+    },
+    {
+      "id": "imu",
+      "name": "IMU University",
+      "short": "IMU",
+      "country": "Malaysia",
+      "city": "Bukit Jalil, Kuala Lumpur",
+      "kind": "Private",
+      "site": "https://www.imu.edu.my",
+      "programs": [
+        "Health",
+        "Medicine",
+        "Science"
+      ]
+    },
+    {
+      "id": "city",
+      "name": "City University Malaysia",
+      "short": "City University",
+      "country": "Malaysia",
+      "city": "Petaling Jaya, Selangor",
+      "kind": "Private",
+      "site": "https://city.edu.my",
+      "programs": [
+        "Business",
+        "Engineering",
+        "Education"
+      ]
+    },
+    {
+      "id": "cyberjaya",
+      "name": "University of Cyberjaya",
+      "short": "UoC",
+      "country": "Malaysia",
+      "city": "Cyberjaya, Selangor",
+      "kind": "Private",
+      "site": "https://cyberjaya.edu.my",
+      "programs": [
+        "Health",
+        "Medicine",
+        "Business"
+      ]
+    },
+    {
+      "id": "albukhary",
+      "name": "Albukhary International University",
+      "short": "AIU",
+      "country": "Malaysia",
+      "city": "Alor Setar, Kedah",
+      "kind": "Private",
+      "site": "https://aiu.edu.my",
+      "programs": [
+        "Business",
+        "Education"
+      ]
+    },
+    {
+      "id": "nilai",
+      "name": "Nilai University",
+      "short": "Nilai",
+      "country": "Malaysia",
+      "city": "Nilai, Negeri Sembilan",
+      "kind": "Private",
+      "site": "https://www.nilai.edu.my",
+      "programs": [
+        "Business",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "oum",
+      "name": "Open University Malaysia",
+      "short": "OUM",
+      "country": "Malaysia",
+      "city": "Petaling Jaya, Selangor",
+      "kind": "Private",
+      "site": "https://www.oum.edu.my",
+      "programs": [
+        "Education",
+        "Business",
+        "Management"
+      ]
+    },
+    {
+      "id": "aeu",
+      "name": "Asia e University",
+      "short": "AeU",
+      "country": "Malaysia",
+      "city": "Subang Jaya, Selangor",
+      "kind": "Private",
+      "site": "https://aeu.edu.my",
+      "programs": [
+        "Education",
+        "Management",
+        "Business"
+      ]
+    },
+    {
+      "id": "reading-my",
+      "name": "University of Reading Malaysia",
+      "short": "Reading MY",
+      "country": "Malaysia",
+      "city": "Iskandar Puteri, Johor",
+      "kind": "Private",
+      "site": "https://www.reading.edu.my",
+      "programs": [
+        "Business",
+        "Psychology"
+      ]
+    },
+    {
+      "id": "southampton-my",
+      "name": "University of Southampton Malaysia",
+      "short": "Southampton MY",
+      "country": "Malaysia",
+      "city": "Iskandar Puteri, Johor",
+      "kind": "Private",
+      "site": "https://www.southampton.ac.uk/malaysia",
+      "programs": [
+        "Engineering",
+        "Business"
+      ]
+    },
+    {
+      "id": "swinburne-my",
+      "name": "Swinburne University of Technology Sarawak Campus",
+      "short": "Swinburne",
+      "country": "Malaysia",
+      "city": "Kuching, Sarawak",
+      "kind": "Private",
+      "site": "https://www.swinburne.edu.my",
+      "programs": [
+        "Engineering",
+        "Business",
+        "Technology"
+      ]
+    },
+    {
+      "id": "uow-my",
+      "name": "UOW Malaysia",
+      "short": "UOW Malaysia",
+      "country": "Malaysia",
+      "city": "Selangor / Penang / Johor",
+      "kind": "Private",
+      "site": "https://www.uow.edu.my",
+      "programs": [
+        "Business",
+        "Communication",
+        "Computer Science"
+      ]
+    },
+    {
+      "id": "japan",
+      "name": "University of Tokyo",
+      "short": "UTokyo",
+      "country": "Japan",
+      "city": "Tokyo",
+      "kind": "Public",
+      "site": "https://www.u-tokyo.ac.jp/en/",
+      "programs": [
+        "Engineering",
+        "Economics",
+        "Science"
+      ]
+    },
+    {
+      "id": "kyoto",
+      "name": "Kyoto University",
+      "short": "Kyoto",
+      "country": "Japan",
+      "city": "Kyoto",
+      "kind": "Public",
+      "site": "https://www.kyoto-u.ac.jp/en",
+      "programs": [
+        "Science",
+        "Engineering",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "tum",
+      "name": "Technical University of Munich",
+      "short": "TUM",
+      "country": "Germany",
+      "city": "Munich",
+      "kind": "Public",
+      "site": "https://www.tum.de/en/",
+      "programs": [
+        "Engineering",
+        "Informatics",
+        "Management"
+      ]
+    },
+    {
+      "id": "heidelberg",
+      "name": "Heidelberg University",
+      "short": "Heidelberg",
+      "country": "Germany",
+      "city": "Heidelberg",
+      "kind": "Public",
+      "site": "https://www.uni-heidelberg.de/en",
+      "programs": [
+        "Science",
+        "Medicine",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "mit",
+      "name": "Massachusetts Institute of Technology",
+      "short": "MIT",
+      "country": "United States",
+      "city": "Cambridge, Massachusetts",
+      "kind": "Private",
+      "site": "https://www.mit.edu",
+      "programs": [
+        "Engineering",
+        "Computer Science",
+        "Economics"
+      ]
+    },
+    {
+      "id": "harvard",
+      "name": "Harvard University",
+      "short": "Harvard",
+      "country": "United States",
+      "city": "Cambridge, Massachusetts",
+      "kind": "Private",
+      "site": "https://www.harvard.edu",
+      "programs": [
+        "Public Health",
+        "Science",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "auckland",
+      "name": "University of Auckland",
+      "short": "Auckland",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "kind": "Public",
+      "site": "https://www.auckland.ac.nz/en.html",
+      "programs": [
+        "Business",
+        "Engineering",
+        "Science"
+      ]
+    },
+    {
+      "id": "otago",
+      "name": "University of Otago",
+      "short": "Otago",
+      "country": "New Zealand",
+      "city": "Dunedin",
+      "kind": "Public",
+      "site": "https://www.otago.ac.nz",
+      "programs": [
+        "Health",
+        "Science",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "tcd",
+      "name": "Trinity College Dublin",
+      "short": "Trinity",
+      "country": "Ireland",
+      "city": "Dublin",
+      "kind": "Public",
+      "site": "https://www.tcd.ie",
+      "programs": [
+        "Science",
+        "Computer Science",
+        "Business"
+      ]
+    },
+    {
+      "id": "ucd",
+      "name": "University College Dublin",
+      "short": "UCD",
+      "country": "Ireland",
+      "city": "Dublin",
+      "kind": "Public",
+      "site": "https://www.ucd.ie",
+      "programs": [
+        "Agriculture",
+        "Business",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "sorbonne",
+      "name": "Sorbonne University",
+      "short": "Sorbonne",
+      "country": "France",
+      "city": "Paris",
+      "kind": "Public",
+      "site": "https://www.sorbonne-universite.fr/en",
+      "programs": [
+        "Science",
+        "Medicine",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "psl",
+      "name": "Université PSL",
+      "short": "PSL",
+      "country": "France",
+      "city": "Paris",
+      "kind": "Public",
+      "site": "https://psl.eu/en",
+      "programs": [
+        "Science",
+        "Management",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "bologna",
+      "name": "University of Bologna",
+      "short": "Bologna",
+      "country": "Italy",
+      "city": "Bologna",
+      "kind": "Public",
+      "site": "https://www.unibo.it/en",
+      "programs": [
+        "Economics",
+        "Engineering",
+        "Law"
+      ]
+    },
+    {
+      "id": "sapienza",
+      "name": "Sapienza University of Rome",
+      "short": "Sapienza",
+      "country": "Italy",
+      "city": "Rome",
+      "kind": "Public",
+      "site": "https://www.uniroma1.it/en",
+      "programs": [
+        "Engineering",
+        "Science",
+        "Medicine"
+      ]
+    },
+    {
+      "id": "uamsterdam",
+      "name": "University of Amsterdam",
+      "short": "UvA",
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "kind": "Public",
+      "site": "https://www.uva.nl/en",
+      "programs": [
+        "Social Sciences",
+        "Economics",
+        "Science"
+      ]
+    },
+    {
+      "id": "tudelft",
+      "name": "Delft University of Technology",
+      "short": "TU Delft",
+      "country": "Netherlands",
+      "city": "Delft",
+      "kind": "Public",
+      "site": "https://www.tudelft.nl/en",
+      "programs": [
+        "Engineering",
+        "Architecture",
+        "Technology"
+      ]
+    },
+    {
+      "id": "lund",
+      "name": "Lund University",
+      "short": "Lund",
+      "country": "Sweden",
+      "city": "Lund",
+      "kind": "Public",
+      "site": "https://www.lunduniversity.lu.se",
+      "programs": [
+        "Science",
+        "Engineering",
+        "Social Sciences"
+      ]
+    },
+    {
+      "id": "kth",
+      "name": "KTH Royal Institute of Technology",
+      "short": "KTH",
+      "country": "Sweden",
+      "city": "Stockholm",
+      "kind": "Public",
+      "site": "https://www.kth.se/en",
+      "programs": [
+        "Engineering",
+        "Computer Science",
+        "Technology"
+      ]
+    },
+    {
+      "id": "helsinki",
+      "name": "University of Helsinki",
+      "short": "Helsinki",
+      "country": "Finland",
+      "city": "Helsinki",
+      "kind": "Public",
+      "site": "https://www.helsinki.fi/en",
+      "programs": [
+        "Agriculture",
+        "Science",
+        "Humanities"
+      ]
+    },
+    {
+      "id": "aalto",
+      "name": "Aalto University",
+      "short": "Aalto",
+      "country": "Finland",
+      "city": "Espoo",
+      "kind": "Public",
+      "site": "https://www.aalto.fi/en",
+      "programs": [
+        "Engineering",
+        "Design",
+        "Business"
+      ]
+    },
+    {
+      "id": "nus",
+      "name": "National University of Singapore",
+      "short": "NUS",
+      "country": "Singapore",
+      "city": "Singapore",
+      "kind": "Public",
+      "site": "https://nus.edu.sg",
+      "programs": [
+        "Business",
+        "Engineering",
+        "Science"
+      ]
+    },
+    {
+      "id": "ntu-sg",
+      "name": "Nanyang Technological University",
+      "short": "NTU",
+      "country": "Singapore",
+      "city": "Singapore",
+      "kind": "Public",
+      "site": "https://www.ntu.edu.sg",
+      "programs": [
+        "Engineering",
+        "Business",
+        "Science"
+      ]
+    },
+    {
+      "id": "khalifa",
+      "name": "Khalifa University",
+      "short": "Khalifa",
+      "country": "United Arab Emirates",
+      "city": "Abu Dhabi",
+      "kind": "Public",
+      "site": "https://www.ku.ac.ae",
+      "programs": [
+        "Engineering",
+        "Science",
+        "Medicine"
+      ]
+    },
+    {
+      "id": "uaeu",
+      "name": "United Arab Emirates University",
+      "short": "UAEU",
+      "country": "United Arab Emirates",
+      "city": "Al Ain",
+      "kind": "Public",
+      "site": "https://www.uaeu.ac.ae/en/",
+      "programs": [
+        "Agriculture",
+        "Engineering",
+        "Business"
+      ]
+    },
+    {
+      "id": "koc",
+      "name": "Koç University",
+      "short": "Koç",
+      "country": "Turkey",
+      "city": "Istanbul",
+      "kind": "Private",
+      "site": "https://www.ku.edu.tr/en/",
+      "programs": [
+        "Business",
+        "Engineering",
+        "Social Sciences"
+      ]
+    },
+    {
+      "id": "sabanci",
+      "name": "Sabancı University",
+      "short": "Sabancı",
+      "country": "Turkey",
+      "city": "Istanbul",
+      "kind": "Private",
+      "site": "https://www.sabanciuniv.edu/en",
+      "programs": [
+        "Engineering",
+        "Management",
+        "Social Sciences"
+      ]
+    },
+    {
+      "id": "chula",
+      "name": "Chulalongkorn University",
+      "short": "Chula",
+      "country": "Thailand",
+      "city": "Bangkok",
+      "kind": "Public",
+      "site": "https://www.chula.ac.th/en/",
+      "programs": [
+        "Business",
+        "Engineering",
+        "Science"
+      ]
+    },
+    {
+      "id": "mahidol",
+      "name": "Mahidol University",
+      "short": "Mahidol",
+      "country": "Thailand",
+      "city": "Nakhon Pathom / Bangkok",
+      "kind": "Public",
+      "site": "https://mahidol.ac.th",
+      "programs": [
+        "Health",
+        "Science",
+        "International Studies"
+      ]
+    },
+    {
+      "id": "my-u-aimstuniversity",
+      "name": "AIMST University",
+      "short": "AIMST University",
+      "country": "Malaysia",
+      "city": "Sungai Petani, Kedah",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://aimst.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-almadinahinternationaluniversitymediu",
+      "name": "Al-Madinah International University (MEDIU)",
+      "short": "Al-Madinah International University (MEDIU)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.mediu.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-alsultanabdullahahmadshahquranicuniversityofpahang",
+      "name": "Al-Sultan Abdullah Ahmad Shah Quranic University of Pahang",
+      "short": "Al-Sultan Abdullah Ahmad Shah Quranic University of Pahang",
+      "country": "Malaysia",
+      "city": "Pahang",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://uniqsaas.edu.my/soalan-lazim-faq/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=82"
+    },
+    {
+      "id": "my-u-asiametropolitanuniversity",
+      "name": "Asia Metropolitan University",
+      "short": "Asia Metropolitan University",
+      "country": "Malaysia",
+      "city": "Johor Bahru, Johor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://amu.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=630"
+    },
+    {
+      "id": "my-u-asiametropolitanuniversitycyberjayacampus",
+      "name": "Asia Metropolitan University Cyberjaya Campus",
+      "short": "Asia Metropolitan University Cyberjaya Campus",
+      "country": "Malaysia",
+      "city": "Cyberjaya, Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=85"
+    },
+    {
+      "id": "my-u-asiaschoolofbusinessasb",
+      "name": "Asia School of Business (ASB)",
+      "short": "Asia School of Business (ASB)",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://asb.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-binaryuniversityofmanagemententrepreneurshipbume",
+      "name": "Binary University of Management & Entrepreneurship (BUME)",
+      "short": "Binary University of Management & Entrepreneurship (BUME)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.binary.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-drbhicomuniversityofautomotivemalaysia",
+      "name": "DRB-HICOM University of Automotive Malaysia",
+      "short": "DRB-HICOM University of Automotive Malaysia",
+      "country": "Malaysia",
+      "city": "Pekan, Pahang",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.en.dhuautomotive.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=603"
+    },
+    {
+      "id": "my-u-globalnxtuniversity",
+      "name": "GlobalNxt University",
+      "short": "GlobalNxt University",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://globalnxt.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=744"
+    },
+    {
+      "id": "my-u-inceifuniversity",
+      "name": "INCEIF University",
+      "short": "INCEIF University",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.inceif.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-kpjhealthcareuniversity",
+      "name": "KPJ Healthcare University",
+      "short": "KPJ Healthcare University",
+      "country": "Malaysia",
+      "city": "Nilai, Negeri Sembilan",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [
+        "Bachelor of Pharmacy with Honours",
+        "Bachelor of Physiotherapy (Hons)",
+        "Bachelor of Science in Nursing (Honours) – ODL",
+        "Diploma in Healthcare Management"
+      ],
+      "site": "https://kpju.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=346"
+    },
+    {
+      "id": "my-u-limkokwinguniversityofcreativetechnology",
+      "name": "Limkokwing University of Creative Technology",
+      "short": "Limkokwing University of Creative Technology",
+      "country": "Malaysia",
+      "city": "Cyberjaya, Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.limkokwing.net",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-malaysiauniversityofscienceandtechnologymust",
+      "name": "Malaysia University of Science and Technology (MUST)",
+      "short": "Malaysia University of Science and Technology (MUST)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://must.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-malaysiancooperativeentrepreneurshipuniversity",
+      "name": "Malaysian Cooperative Entrepreneurship University",
+      "short": "Malaysian Cooperative Entrepreneurship University",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.ukkm.edu.my/about/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-malaysianinstituteforsupplychaininnovationmisi",
+      "name": "Malaysian Institute for Supply Chain Innovation (MISI)",
+      "short": "Malaysian Institute for Supply Chain Innovation (MISI)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.misi.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-meritusuniversity",
+      "name": "Meritus University",
+      "short": "Meritus University",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.meritus.edu.my/index.php",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-milauniversity",
+      "name": "MILA University",
+      "short": "MILA University",
+      "country": "Malaysia",
+      "city": "Nilai, Negeri Sembilan",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://mila.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-newcastleuniversitymedicinemalaysia",
+      "name": "Newcastle University Medicine Malaysia",
+      "short": "Newcastle University Medicine Malaysia",
+      "country": "Malaysia",
+      "city": "Johor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.ncl.ac.uk/numed/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-perdanauniversity",
+      "name": "Perdana University",
+      "short": "Perdana University",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.perdanauniversity.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-putrabusinessschoolpbs",
+      "name": "Putra Business School (PBS)",
+      "short": "Putra Business School (PBS)",
+      "country": "Malaysia",
+      "city": "Serdang, Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://putrabusinessschool.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-questinternationaluniversityqiu",
+      "name": "Quest International University (QIU)",
+      "short": "Quest International University (QIU)",
+      "country": "Malaysia",
+      "city": "Ipoh, Perak",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://qiu.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-rafflesuniversityru",
+      "name": "Raffles University (RU)",
+      "short": "Raffles University (RU)",
+      "country": "Malaysia",
+      "city": "Johor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://raffles-university.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-rcsiucdmalaysiacampus",
+      "name": "RCSI & UCD Malaysia Campus",
+      "short": "RCSI & UCD Malaysia Campus",
+      "country": "Malaysia",
+      "city": "Penang",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.rcsiucd.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-tunkuabdulrahmanuniversityofmanagementandtechnologytarumt",
+      "name": "Tunku Abdul Rahman University of Management and Technology (TAR UMT)",
+      "short": "TAR UMT",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.tarc.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-universitiselangorunisel",
+      "name": "Universiti Selangor (UNISEL)",
+      "short": "Universiti Selangor (UNISEL)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://unisel.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-universitiislammalaysiauim",
+      "name": "Universiti Islam Malaysia (UIM)",
+      "short": "Universiti Islam Malaysia (UIM)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.uim.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-universitiislammelakaunimel",
+      "name": "Universiti Islam Melaka (UNIMEL)",
+      "short": "Universiti Islam Melaka (UNIMEL)",
+      "country": "Malaysia",
+      "city": "Melaka",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://unimel.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-universitiislamselangoruis",
+      "name": "Universiti Islam Selangor (UIS)",
+      "short": "Universiti Islam Selangor (UIS)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.uis.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-universitisultanazlanshahusas",
+      "name": "Universiti Sultan Azlan Shah (USAS)",
+      "short": "Universiti Sultan Azlan Shah (USAS)",
+      "country": "Malaysia",
+      "city": "Perak",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.usas.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-universitigeomatikamalaysia",
+      "name": "Universiti Geomatika Malaysia",
+      "short": "Universiti Geomatika Malaysia",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.geomatika.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-ucypuniversity",
+      "name": "UCYP University",
+      "short": "UCYP University",
+      "country": "Malaysia",
+      "city": "Pahang",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.ucyp.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-u-universitiantarabangsamaiwpunimaiwpformerlyucmi",
+      "name": "Universiti Antarabangsa MAIWP (UniMAIWP, formerly UCMI)",
+      "short": "UniMAIWP",
+      "country": "Malaysia",
+      "city": "Batu Caves, Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University",
+      "programs": [],
+      "site": "https://www.unimaiwp.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyipts.cfm"
+    },
+    {
+      "id": "my-uc-alfauniversitycollegeauc",
+      "name": "Alfa University College (AUC)",
+      "short": "Alfa University College (AUC)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://alfa.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=211"
+    },
+    {
+      "id": "my-uc-amcuniversitycollege",
+      "name": "AMC University College",
+      "short": "AMC University College",
+      "country": "Malaysia",
+      "city": "Sabah",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://amc.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=447"
+    },
+    {
+      "id": "my-uc-berjayauniversitycollege",
+      "name": "BERJAYA University College",
+      "short": "BERJAYA University College",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.berjaya.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-firstcityuniversitycollege",
+      "name": "First City University College",
+      "short": "First City University College",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://firstcity.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-genovasiuniversitycollege",
+      "name": "Genovasi University College",
+      "short": "Genovasi University College",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.genovasi.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=1060"
+    },
+    {
+      "id": "my-uc-hanchianguniversitycollegeofcommunication",
+      "name": "Han Chiang University College of Communication",
+      "short": "Han Chiang University College of Communication",
+      "country": "Malaysia",
+      "city": "Penang",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://hcu.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-icatsuniversitycollege",
+      "name": "i-CATS University College",
+      "short": "i-CATS University College",
+      "country": "Malaysia",
+      "city": "Sarawak",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://icats.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-innovativeuniversitycollege",
+      "name": "Innovative University College",
+      "short": "Innovative University College",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://innovative.edu.my/welcome",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=476"
+    },
+    {
+      "id": "my-uc-internationaluniversitycollegeofartsandscienceiucas",
+      "name": "International University College of Arts and Science (I-UCAS)",
+      "short": "International University College of Arts and Science (I-UCAS)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://neg.edu.my/IUCAS-College",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=582"
+    },
+    {
+      "id": "my-uc-internationaluniversitycollegeoftechnologytwintech",
+      "name": "International University College of Technology Twintech",
+      "short": "International University College of Technology Twintech",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [
+        "Bachelor in Business Administration",
+        "Master in Business Administration",
+        "Doctor in Business Administration",
+        "Bachelor in Artificial Intelligence",
+        "Bachelor in Visual Communication"
+      ],
+      "site": "https://newtwintech.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=440"
+    },
+    {
+      "id": "my-uc-jesseltonuniversitycollege",
+      "name": "Jesselton University College",
+      "short": "Jesselton University College",
+      "country": "Malaysia",
+      "city": "Sabah",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://jesselton.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-kingsuniversitycollege",
+      "name": "Kings University College",
+      "short": "Kings University College",
+      "country": "Malaysia",
+      "city": "Jalan Sultan Ismail, Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://kingsuniversitycollege.edu.my",
+      "registrySource": "https://www2.mqa.gov.my/MQR/english/eakrKPList.cfm?IDAkrIPTS=348",
+      "cardPhoto": "https://kingsuniversitycollege.edu.my/wp-content/uploads/2024/06/WhatsApp-Image-2024-03-22-at-3.51.46-PM-1.jpeg",
+      "cardPhotoSource": "https://kingsuniversitycollege.edu.my/"
+    },
+    {
+      "id": "my-uc-kolejuniversitifairview",
+      "name": "Kolej Universiti Fairview",
+      "short": "Kolej Universiti Fairview",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://ucf.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=912"
+    },
+    {
+      "id": "my-uc-kolejuniversitiijn",
+      "name": "Kolej Universiti IJN",
+      "short": "Kolej Universiti IJN",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.ijn.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=453"
+    },
+    {
+      "id": "my-uc-kolejuniversitisaito",
+      "name": "Kolej Universiti Saito",
+      "short": "Kolej Universiti Saito",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://saito.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-kolejuniversitivision",
+      "name": "Kolej Universiti Vision",
+      "short": "Kolej Universiti Vision",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://vision.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=303"
+    },
+    {
+      "id": "my-uc-lincolnuniversitycollege",
+      "name": "Lincoln University College",
+      "short": "Lincoln University College",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.lincoln.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-lintonuniversitycollege",
+      "name": "Linton University College",
+      "short": "Linton University College",
+      "country": "Malaysia",
+      "city": "Negeri Sembilan",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=90"
+    },
+    {
+      "id": "my-uc-manipaluniversitycollegemalaysiamucm",
+      "name": "Manipal University College Malaysia (MUCM)",
+      "short": "Manipal University College Malaysia (MUCM)",
+      "country": "Malaysia",
+      "city": "Melaka",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://manipal.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=108"
+    },
+    {
+      "id": "my-uc-netherlandsmaritimeuniversitycollegenmuc",
+      "name": "Netherlands Maritime University College (NMUC)",
+      "short": "Netherlands Maritime University College (NMUC)",
+      "country": "Malaysia",
+      "city": "Johor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://nmuc.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=680"
+    },
+    {
+      "id": "my-uc-newerauniversitycollege",
+      "name": "New Era University College",
+      "short": "New Era University College",
+      "country": "Malaysia",
+      "city": "Kajang, Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.newera.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-northborneouniversitycollegenbuc",
+      "name": "North Borneo University College (NBUC)",
+      "short": "North Borneo University College (NBUC)",
+      "country": "Malaysia",
+      "city": "Sabah",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://nbuc.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList.cfm?IDAkrIPTS=293"
+    },
+    {
+      "id": "my-uc-southernuniversitycollege",
+      "name": "Southern University College",
+      "short": "Southern University College",
+      "country": "Malaysia",
+      "city": "Johor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.southern.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-spectruminternationaluniversitycollege",
+      "name": "Spectrum International University College",
+      "short": "Spectrum International University College",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://siuc.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-sultanismailpetrainternationalislamicuniversitycollege",
+      "name": "Sultan Ismail Petra International Islamic University College",
+      "short": "Sultan Ismail Petra International Islamic University College",
+      "country": "Malaysia",
+      "city": "Kelantan",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.kias.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-universitycollegebestari",
+      "name": "University College Bestari",
+      "short": "University College Bestari",
+      "country": "Malaysia",
+      "city": "Terengganu",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.ucbestari.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-universitycollegeofagrosciencemalaysia",
+      "name": "University College of Agroscience Malaysia",
+      "short": "University College of Agroscience Malaysia",
+      "country": "Malaysia",
+      "city": "Melaka",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://ucam.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-universitycollegeofaviationmalaysiaunicam",
+      "name": "University College of Aviation Malaysia (UniCAM)",
+      "short": "University College of Aviation Malaysia (UniCAM)",
+      "country": "Malaysia",
+      "city": "Selangor",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://aviation.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-universitycollegesabahfoundationucsf",
+      "name": "University College Sabah Foundation (UCSF)",
+      "short": "University College Sabah Foundation (UCSF)",
+      "country": "Malaysia",
+      "city": "Sabah",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.ucsf.edu.my/contact-us/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-universitycollegetatiuctati",
+      "name": "University College TATI (UC TATI)",
+      "short": "University College TATI (UC TATI)",
+      "country": "Malaysia",
+      "city": "Terengganu",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.uctati.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-uowmalaysiakdupenanguniversitycollege",
+      "name": "UOW Malaysia KDU Penang University College",
+      "short": "UOW Malaysia KDU Penang University College",
+      "country": "Malaysia",
+      "city": "Penang",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.uow.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-veritasuniversitycollege",
+      "name": "Veritas University College",
+      "short": "Veritas University College",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.veritas.edu.my/",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-uc-widaduniversitycollege",
+      "name": "Widad University College",
+      "short": "Widad University College",
+      "country": "Malaysia",
+      "city": "Pahang",
+      "kind": "Private",
+      "institutionType": "University College",
+      "programs": [],
+      "site": "https://www.widad.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrbyiptsku.cfm"
+    },
+    {
+      "id": "my-college-lsbf",
+      "name": "LSBF College Malaysia (London School of Business and Finance)",
+      "short": "LSBF College Malaysia (London School of Business and Finance)",
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "kind": "Private",
+      "institutionType": "College",
+      "programs": [],
+      "site": "https://lsbf.edu.my",
+      "registrySource": "https://www.mqa.gov.my/mqr/english/eakrKPList_print.cfm?IDAkrIPTS=614"
+    }
+  ],
+  "management": []
+}

@@ -1,0 +1,224 @@
+/* Private browser-side A&N photo compositor. Cropping only; source photos are not uploaded until Publish. */
+(function(){
+'use strict';
+const ratios={
+ team:{w:4,h:5,label:'Profile portrait · 4:5'},
+ success:{w:16,h:9,label:'Success card · 16:9'},
+ country:{w:4,h:3,label:'Destination card · 4:3'},
+ university:{w:16,h:9,label:'University cover · 16:9'},
+ logo:{w:1,h:1,label:'University logo · 1:1'},
+ gallery:{w:16,h:9,label:'Campus gallery · 16:9'}
+};
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let active=false;
+async function editFile(file,kind='success'){
+ if(!(file instanceof Blob)||!file.size||!String(file.type).startsWith('image/'))throw Error('Choose a JPG, PNG or WebP photo.');
+ if(file.size>8388608)throw Error('Photo must be under 8 MB.');
+ return editBlob(file,kind);
+}
+async function editUrl(url,kind='success'){
+ const u=new URL(url);
+ if(u.protocol!=='https:')throw Error('Only secure image addresses can be edited.');
+ const res=await fetch(u.href,{mode:'cors',credentials:'omit'});
+ if(!res.ok)throw Error('Could not load the existing image. Choose a new photo from Gallery instead.');
+ const blob=await res.blob();
+ if(!blob.type.startsWith('image/'))throw Error('The selected item is not an image.');
+ return editBlob(blob,kind);
+}
+async function editBlob(blob,kind){
+ if(active)throw Error('Finish the current photo edit first.');
+ active=true;
+ const ratio=ratios[kind]||ratios.success;
+ const localUrl=URL.createObjectURL(blob);
+ let dialog=null,done=null;
+ try{
+  const photo=new Image();photo.decoding='async';
+  photo.src=localUrl;
+  if(photo.decode)await photo.decode();else await new Promise((resolve,reject)=>{photo.onload=resolve;photo.onerror=reject;});
+  const iw=photo.naturalWidth,ih=photo.naturalHeight;
+  if(!iw||!ih)throw Error('Cannot read image dimensions.');
+  dialog=document.createElement('dialog');
+  dialog.className='an-crop-dialog';
+  dialog.setAttribute('aria-label','Adjust photo before publishing');
+  dialog.innerHTML=
+    '<div class="an-crop-panel"><div class="an-crop-head"><div><small>PHOTO ADJUSTMENT</small><h2>Zoom <em>& Position</em></h2><p>'+esc(ratio.label)+'</p></div>'
+   +'<button type="button" class="an-crop-close" data-crop="cancel" aria-label="Cancel photo editing">×</button></div>'
+   +'<div class="an-crop-canvas-box"><canvas class="an-crop-canvas" width="'+(ratio.w===4&&ratio.h===5?'640':'960')+'" height="'+(ratio.w===4&&ratio.h===5?'800':Math.round(960*ratio.h/ratio.w))+'"></canvas>'
+   +'<div class="an-crop-guides" aria-hidden="true"><span></span></div></div>'
+   +'<p class="an-crop-instruction">Move the photo with your finger or mouse. Pinch or slide to zoom until it fits the frame.</p>'
+   +'<div class="an-crop-slider"><button type="button" data-crop="minus" aria-label="Zoom out">−</button><input type="range" min="100" max="500" step="1" value="100" aria-label="Zoom" data-crop-zoom><button type="button" data-crop="plus" aria-label="Zoom in">+</button><output data-zoom-value>100%</output></div>'
+   +'<div class="an-crop-actions"><button type="button" class="an-crop-secondary" data-crop="reset">Reset</button>'
+   +'<button type="button" class="an-crop-secondary" data-crop="cancel">Cancel</button><button type="button" class="an-crop-primary" data-crop="original">✓ Keep Full Original</button><button type="button" class="an-crop-primary" data-crop="save">Use Cropped Version</button></div>'
+   +'<p class="an-crop-status" role="status"></p></div>';
+  document.body.appendChild(dialog);
+  const canvas=dialog.querySelector('canvas'),ctx=canvas.getContext('2d',{alpha:kind==='logo'});
+  const box=dialog.querySelector('.an-crop-canvas-box');
+  const maxW=Math.max(220,Math.min(600,window.innerWidth-48));
+  const maxH=Math.max(170,Math.min(515,window.innerHeight*.49));
+  const actualW=Math.min(maxW,maxH*ratio.w/ratio.h);
+  box.style.width=actualW+'px';box.style.height=(actualW*ratio.h/ratio.w)+'px';
+  canvas.style.width='100%';canvas.style.height='100%';
+  const w=canvas.width,h=canvas.height,base=Math.max(w/iw,h/ih);
+  const slider=dialog.querySelector('[data-crop-zoom]'),label=dialog.querySelector('[data-zoom-value]');
+  let zoom=1,offsetX=0,offsetY=0,frame=null,finished=false;
+  const pointers=new Map();
+  let drag=null,pinch=null;
+  const clamp=()=>{
+   const scaledW=iw*base*zoom,scaledH=ih*base*zoom;
+   const bx=Math.max(0,(scaledW-w)/2),by=Math.max(0,(scaledH-h)/2);
+   offsetX=Math.max(-bx,Math.min(bx,offsetX));
+   offsetY=Math.max(-by,Math.min(by,offsetY));
+  };
+  const render=()=>{
+   frame=null;clamp();
+   ctx.clearRect(0,0,w,h);
+   if(kind!=='logo'){ctx.fillStyle='#090a0e';ctx.fillRect(0,0,w,h);}
+   const sw=iw*base*zoom,sh=ih*base*zoom;
+   ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+   ctx.drawImage(photo,(w-sw)/2+offsetX,(h-sh)/2+offsetY,sw,sh);
+  };
+  const paint=()=>{if(frame===null)frame=requestAnimationFrame(render);};
+  const setZoom=(v,anchorX=w/2,anchorY=h/2)=>{
+   const previous=zoom;zoom=Math.max(1,Math.min(5,v));
+   offsetX=(offsetX+w/2-anchorX)*(zoom/previous)+anchorX-w/2;
+   offsetY=(offsetY+h/2-anchorY)*(zoom/previous)+anchorY-h/2;
+   slider.value=String(Math.round(zoom*100));label.textContent=Math.round(zoom*100)+'%';paint();
+  };
+  const point=e=>{const r=canvas.getBoundingClientRect();return {x:(e.clientX-r.left)*w/r.width,y:(e.clientY-r.top)*h/r.height};};
+  const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
+  const center=(a,b)=>({x:(a.x+b.x)/2,y:(a.y+b.y)/2});
+  const close=result=>{
+   if(finished)return;finished=true;
+   if(frame!==null)cancelAnimationFrame(frame);
+   pointers.clear();active=false;
+   try{dialog.close?.();}catch(_){}
+   dialog.remove();
+   URL.revokeObjectURL(localUrl);
+   done?.(result);
+  };
+  canvas.addEventListener('pointerdown',e=>{
+   e.preventDefault();canvas.setPointerCapture(e.pointerId);
+   pointers.set(e.pointerId,point(e));
+   if(pointers.size===1){drag={x:point(e).x,y:point(e).y,ox:offsetX,oy:offsetY};pinch=null;}
+   if(pointers.size===2){const p=[...pointers.values()];pinch={dist:distance(p[0],p[1]),zoom,center:center(p[0],p[1]),ox:offsetX,oy:offsetY};drag=null;}
+  });
+  canvas.addEventListener('pointermove',e=>{
+   if(!pointers.has(e.pointerId))return;
+   e.preventDefault();pointers.set(e.pointerId,point(e));
+   if(pointers.size===1&&drag){const p=[...pointers.values()][0];offsetX=drag.ox+p.x-drag.x;offsetY=drag.oy+p.y-drag.y;paint();}
+   else if(pointers.size===2&&pinch){
+    const p=[...pointers.values()],mid=center(p[0],p[1]);
+    const v=Math.max(1,Math.min(5,pinch.zoom*distance(p[0],p[1])/Math.max(1,pinch.dist)));
+    zoom=pinch.zoom;offsetX=pinch.ox;offsetY=pinch.oy;
+    setZoom(v,pinch.center.x,pinch.center.y);
+    offsetX+=mid.x-pinch.center.x;offsetY+=mid.y-pinch.center.y;paint();
+   }
+  });
+  const pointerEnd=e=>{
+   pointers.delete(e.pointerId);
+   if(pointers.size===1){const p=[...pointers.values()][0];drag={x:p.x,y:p.y,ox:offsetX,oy:offsetY};pinch=null;}
+   else{drag=null;pinch=null;}
+  };
+  canvas.addEventListener('pointerup',pointerEnd);canvas.addEventListener('pointercancel',pointerEnd);
+  canvas.addEventListener('wheel',e=>{e.preventDefault();const p=point(e);setZoom(zoom*(e.deltaY<0?1.08:1/1.08),p.x,p.y);},{passive:false});
+  slider.addEventListener('input',()=>setZoom(Number(slider.value)/100));
+  dialog.addEventListener('click',async e=>{
+   const name=e.target.closest('[data-crop]')?.dataset.crop;
+   if(!name)return;
+   if(name==='cancel'){close(null);return;}
+   if(name==='original'){close(new File([blob],blob.name||('an-original-'+Date.now()+'.jpg'),{type:blob.type||'image/jpeg',lastModified:Date.now()}));return;}
+   if(name==='plus'){setZoom(zoom+.15);return;}
+   if(name==='minus'){setZoom(zoom-.15);return;}
+   if(name==='reset'){zoom=1;offsetX=0;offsetY=0;setZoom(1);return;}
+   if(name==='save'){
+    const button=e.target.closest('button');button.disabled=true;
+    const status=dialog.querySelector('.an-crop-status');
+    try{
+     render();
+     const type=kind==='logo'?'image/png':'image/jpeg';
+     const result=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('Cannot export adjusted photo.')),type,.91));
+     const name='an-photo-'+Date.now()+(kind==='logo'?'.png':'.jpg');
+     close(new File([result],name,{type,lastModified:Date.now()}));
+    }catch(err){status.textContent=err.message||String(err);button.disabled=false;}
+   }
+  });
+  dialog.addEventListener('cancel',e=>{e.preventDefault();close(null)});
+  const result=new Promise(resolve=>done=resolve);
+  if(dialog.showModal)dialog.showModal();else dialog.setAttribute('open','');
+  render();
+  return await result;
+ }catch(err){
+  active=false;
+  dialog?.remove();URL.revokeObjectURL(localUrl);
+  throw err;
+ }
+}
+const guessKind=input=>{
+ if(input.name==='media'||input.name==='story_file')return 'success';
+ if(input.name==='cover_file'||input.name==='card_file')return 'university';
+ if(input.name==='logo_file')return 'logo';
+ if(input.name==='gallery_files')return 'gallery';
+ if(input.closest('.country-item'))return 'country';
+ if(input.closest('.team-item'))return 'team';
+ return 'success';
+};
+async function selectedFile(input,index=0){
+ if(!input)return null;
+ if(input._anCropPending)await input._anCropPending;
+ if(input._anEditedFiles)return input._anEditedFiles[index]||null;
+ return input.files?.[index]||null;
+}
+async function selectedFiles(input){
+ if(!input)return [];
+ if(input._anCropPending)await input._anCropPending;
+ return input._anEditedFiles||Array.from(input.files||[]);
+}
+document.addEventListener('change',event=>{
+ const input=event.target;
+ if(!(input instanceof HTMLInputElement)||input.type!=='file'||!input.files?.length)return;
+ const items=Array.from(input.files);
+ if(!items.some(f=>f.type.startsWith('image/')))return;
+ // Poster and success-story media must be uploaded unchanged: cropping is only a card display decision.
+ if(input.name==='media'||input.name==='story_file'){
+  input._anEditedFiles=items;
+  const note=input.parentElement?.querySelector('.an-crop-ready')||document.createElement('div');
+  note.className='an-crop-ready';note.setAttribute('role','status');
+  if(!note.isConnected)input.insertAdjacentElement('afterend',note);
+  note.textContent='✓ Full original selected, no crop or resize. The card preview may be zoomed, but tapping it shows this complete image.';
+  return;
+ }
+ input._anEditedFiles=null;
+ const promise=(async()=>{
+  const output=[];
+  const preview=input.parentElement?.querySelector('.an-crop-ready')||document.createElement('div');
+  preview.className='an-crop-ready';preview.setAttribute('role','status');
+  if(!preview.isConnected)input.insertAdjacentElement('afterend',preview);
+  preview.textContent='Opening photo adjustment…';
+  for(const file of items){
+   if(!file.type.startsWith('image/')){output.push(file);continue;}
+   const cropped=await editFile(file,guessKind(input));
+   if(!cropped){
+    input.value='';input._anEditedFiles=[];
+    preview.textContent='Photo edit cancelled. Select a photo again when ready.';
+    return;
+   }
+   output.push(cropped);
+  }
+  input._anEditedFiles=output;
+  preview.textContent=output.length+' photo'+(output.length===1?'':'s')+' ready ✓ · Original or adjusted version selected. Press Publish to upload.';
+  if(output.length===1&&output[0].type.startsWith('image/')){
+   const u=URL.createObjectURL(output[0]);
+   let img=preview.querySelector('img');
+   if(!img){img=document.createElement('img');img.className='an-adjusted-preview';preview.appendChild(img);}
+   img.src=u;img.onload=()=>URL.revokeObjectURL(u);
+  }
+ })();
+ input._anCropPending=promise;
+ promise.catch(err=>{
+  input._anEditedFiles=[];input.value='';
+  const label=input.parentElement?.querySelector('.an-crop-ready');
+  if(label)label.textContent='Unable to adjust photo: '+(err.message||err);
+ }).finally(()=>{if(input._anCropPending===promise)input._anCropPending=null;});
+},true);
+window.ANPhotoEditor={editFile,editUrl,selectedFile,selectedFiles};
+})();

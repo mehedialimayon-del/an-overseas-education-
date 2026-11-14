@@ -1,0 +1,858 @@
+body.an-about-banner-mode {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+body.an-about-banner-mode #app { flex: 1 0 auto; display: flex; min-height: 0; }
+body.an-about-banner-mode > .footer { display: none; }
+
+.an-about-banner {
+  --an-banner-height: calc(100dvh - var(--an-top-height, 78px) - 28px);
+  --an-banner-orange: #ff6500;
+  flex: 1;
+  min-width: 0;
+  color: #fff;
+  background: #000;
+}
+.an-about-art {
+  min-height: var(--an-banner-height);
+  width: 100%;
+  display: grid;
+  grid-template: "brand brand portrait" auto "message flags portrait" 1fr "actions actions actions" auto / minmax(0, 1.9fr) minmax(0, .83fr) minmax(0, .92fr);
+  gap: clamp(9px, 1.25vw, 23px);
+  padding: 0 clamp(9px, 1.35vw, 27px) clamp(8px, 1.4vh, 18px);
+}
+.an-banner-brand {
+  grid-area: brand;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.2vw, 22px);
+  border-bottom: 2px solid var(--an-banner-orange);
+}
+.an-banner-brand p {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(17px, 2vw, 37px);
+  font-weight: 850;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+.an-banner-brand strong,
+.an-banner-message h1 span,
+.an-banner-message blockquote strong { color: var(--an-banner-orange); }
+.an-banner-globe {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: clamp(53px, 7vw, 104px);
+  aspect-ratio: 1;
+}
+.an-banner-earth { font-size: clamp(39px, 5vw, 82px); line-height: 1; }
+.an-banner-globe svg { position: absolute; width: 85%; top: 8%; left: 7.5%; }
+.an-banner-message {
+  grid-area: message;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.1vh, 16px);
+  min-width: 0;
+}
+.an-banner-message h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(24px, 3.25vw, 63px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.an-banner-message blockquote {
+  flex: 1;
+  display: block;
+  align-content: center;
+  margin: 0;
+  padding: clamp(10px, 1.45vw, 27px);
+  border: 2px solid var(--an-banner-orange);
+  border-radius: 19px;
+  color: #fff;
+  font: italic clamp(15px, min(1.63vw, 3.5dvh), 32px)/1.19 Georgia, serif;
+}
+.an-banner-destinations {
+  grid-area: flags;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  gap: clamp(6px, 1.1vh, 14px);
+  padding-left: clamp(6px, .8vw, 15px);
+  border-left: 2px solid var(--an-banner-orange);
+}
+.an-banner-destinations h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(12px, 1.4vw, 26px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.an-banner-destinations small { color: #fff; font-size: clamp(9px, .9vw, 16px); }
+.an-banner-flags {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(3px, .6vh, 8px) clamp(2px, .45vw, 9px);
+}
+.an-banner-flags .an2-flag-unit { display: flex; align-items: center; gap: 2px; min-width: 0; }
+.an-banner-flags .an2-static-star { color: var(--an-banner-orange); font-size: clamp(7px, .65vw, 12px); }
+.an-banner-flags .an2-flag { position: relative; display: block; width: 100%; min-width: 0; aspect-ratio: 3 / 2; }
+.an-banner-flags .an2-flag-emoji { position: absolute; inset: 0; font-size: clamp(10px, 1.5vw, 24px); line-height: 1; }
+.an-banner-flags .an2-flag-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; border-radius: 2px; }
+.an-banner-founder {
+  grid-area: portrait;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-width: 0;
+}
+.an-banner-portrait {
+  display: block;
+  width: 100%;
+  max-height: max(180px, calc(var(--an-banner-height) - 145px));
+  flex: 0 1 auto;
+}
+.an-banner-founder figcaption { display: grid; justify-items: center; gap: 4px; text-align: center; width: 100%; }
+.an-banner-founder figcaption strong {
+  padding: .26em .65em;
+  border: 1px solid var(--an-banner-orange);
+  border-radius: 99px;
+  color: var(--an-banner-orange);
+  font-size: clamp(12px, 1.3vw, 24px);
+  line-height: 1.1;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.an-banner-founder figcaption span {
+  padding: .24em .7em;
+  border-radius: 99px;
+  background: #b23e00;
+  color: #fff;
+  font-size: clamp(11px, 1.05vw, 21px);
+  font-weight: 750;
+}
+.an-banner-actions {
+  grid-area: actions;
+  display: grid;
+  grid-template-columns: 1fr 1.18fr 1fr;
+  align-items: center;
+  gap: clamp(8px, 1.3vw, 24px);
+  padding-top: clamp(8px, 1.45vh, 17px);
+  border-top: 2px solid var(--an-banner-orange);
+}
+.an-banner-actions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4em;
+  min-height: clamp(42px, 6.5vh, 72px);
+  padding: .4em .65em;
+  border: 2px solid var(--an-banner-orange);
+  border-radius: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(12px, 1.43vw, 26px);
+  font-weight: 850;
+  line-height: 1.15;
+  transition: transform .2s ease-out, box-shadow .2s ease-out;
+}
+.an-banner-actions .an-banner-read { background: var(--an-banner-orange); color: #fff; }
+.an-banner-actions .an-banner-team { background: #000; color: #fff; }
+.an-banner-actions a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.an-banner-actions p { margin: 0; color: #fff; font: italic clamp(12px, 1.3vw, 24px)/1.15 Georgia, serif; }
+@media (prefers-reduced-motion: no-preference) {
+  .an-banner-earth { animation: an-banner-earth-turn 8s linear infinite; }
+  .an-banner-flags .an2-flag {
+    animation: anTinyFlagWave 3.7s ease-in-out infinite;
+    animation-delay: calc(var(--flag-index) * -.17s);
+  }
+  .an-banner-actions a:is(:hover,:focus-visible) {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 13px #ff650054;
+  }
+  @keyframes an-banner-earth-turn { to { transform: rotate(1turn); } }
+}
+.an-management-page {
+  min-height: calc(100dvh - var(--an-top-height, 78px) - 28px);
+  padding-block: clamp(12px, 2.5vw, 30px);
+}
+.an-management-back { display: inline-block; margin-bottom: 12px; color: #ff8916; }
+#app .an-management-page .an-about-management { min-height: min(66dvh, 660px); }
+#app .an-management-page .an-manager-card { min-height: min(49dvh, 495px) !important; }
+#app .an-management-page .an-manager-white-name { font-size: clamp(19px, 3vw, 34px) !important; }
+@media (max-width: 800px) and (orientation: portrait) {
+  #app .an-management-page .an-manager-card { min-height: 0 !important; }
+  .an-about-art {
+    grid-template: "brand brand" auto "message message" auto "flags portrait" 1fr "actions actions" auto / minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 9px;
+    padding-inline: 8px;
+  }
+  .an-banner-message blockquote { font-size: clamp(13px, 3.55vw, 19px); }
+  .an-banner-destinations { border-left: 0; padding-left: 0; }
+  .an-banner-actions { grid-template-columns: .85fr 1fr; }
+  .an-banner-actions p { display: none; }
+}
+
+.an-banner-flags-mobile { display: none; }
+@media (max-width: 800px) {
+  .an-banner-flags-desktop { display: none; }
+  .an-banner-flags-mobile {
+    display: grid;
+    justify-items: center;
+    gap: 5px 4px;
+  }
+  .an-banner-flags-mobile .an2-native-cloth-flag {
+    width: 100%;
+    max-width: 43px;
+  }
+}
+@media (min-width: 801px) {
+  .an-banner-flags-desktop { justify-items: center; gap: 5px 3px; }
+  .an-banner-flags-desktop .an2-flag-unit { width: 100%; height: 32px; justify-content: center; }
+  .an-banner-flags-desktop .an2-static-star,
+  .an-banner-flags-desktop .an2-flag-emoji { display: none; }
+  .an-banner-flags-desktop .an2-flag {
+    width: 39px;
+    height: 26px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+    transform-origin: left center;
+  }
+  .an-banner-flags-desktop .an2-flag-origin { width: 44px; height: 29px; }
+  .an-banner-flags-desktop .an2-flag-image { object-fit: cover; }
+}
+@media (min-width: 801px) and (prefers-reduced-motion: no-preference) {
+  .an-banner-flags-desktop .an2-flag {
+    animation: anAboutFlagCloth 2.7s ease-in-out infinite;
+    animation-delay: calc(var(--flag-index) * -67ms);
+  }
+  @keyframes anAboutFlagCloth {
+    0%, 100% { transform: perspective(90px) rotateY(-7deg) skewY(-1deg) scaleX(.96); }
+    50% { transform: perspective(90px) rotateY(10deg) skewY(2deg) scaleX(1.04); }
+  }
+}
+
+.an-banner-portfolio,
+.an-banner-team svg { display: none; }
+
+@media (max-width: 800px) {
+  .an-banner-founder-role { text-transform: uppercase; }
+  .an-banner-portfolio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35em;
+    max-width: 100%;
+    min-height: 28px;
+    margin-top: 2px;
+    padding: 3px 9px;
+    border: 1px solid #559eea;
+    border-radius: 99px;
+    background: linear-gradient(#215fa5, #103669);
+    color: #fff;
+    font-size: clamp(10px, 2.7vw, 13px);
+    font-weight: 750;
+    line-height: 1.15;
+  }
+  .an-banner-portfolio i { font-style: normal; }
+  .an-banner-portfolio:focus-visible { outline: 2px solid #a2d7ff; outline-offset: 2px; }
+  .an-banner-actions .an-banner-team {
+    background: linear-gradient(180deg, #39332e 0%, #201b18 47%, #100d0b 49%, #050403 100%);
+    box-shadow: inset 0 1px 0 #ffffff47, inset 0 0 9px #ff65001f;
+  }
+  .an-banner-team svg {
+    display: block;
+    flex: 0 0 1.25em;
+    width: 1.25em;
+    height: 1.25em;
+    color: #ff8b39;
+  }
+  .an-banner-actions a { -webkit-tap-highlight-color: #ffbf874d; }
+  .an-banner-actions .an-banner-read:active,
+  .an-banner-actions .an-banner-team:active {
+    border-color: #ffab69;
+    box-shadow: inset 0 0 16px #ffd6aa66, 0 0 10px #ff650059;
+    filter: brightness(1.13);
+    transform: none;
+    transition: none;
+  }
+}
+
+html body > header.top #brand-typing > span:first-child { color: #ff6500 !important; }
+html body > header.top #brand-typing > span:last-child,
+html body > header.top #an-desktop-wordmark { color: #fff !important; }
+
+#app .an-banner-signature,
+.an2-mobile-overview,
+#app .an-management-page .an-manager-pages { display: none; }
+
+@media (max-width: 800px) {
+  html:has(body:is(.an-about-banner-mode, .an-management-mode)),
+  body:is(.an-about-banner-mode, .an-management-mode) {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  body:is(.an-about-banner-mode, .an-management-mode) {
+    display: flex;
+    flex-direction: column;
+  }
+  body:is(.an-about-banner-mode, .an-management-mode) > #an-global-ticker {
+    position: relative !important;
+    top: auto !important;
+    flex-shrink: 0;
+  }
+  body:is(.an-about-banner-mode, .an-management-mode) > #app {
+    flex: 1 1 0;
+    min-height: 0 !important;
+    overflow: hidden;
+    container-type: size;
+  }
+  body.an-management-mode > .footer { display: none; }
+
+  .an-about-art {
+    height: 100%;
+    min-height: 0;
+    grid-template: "brand brand" auto "message message" auto "flags portrait" minmax(0, 1fr) "actions actions" auto / minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: clamp(4px, 1.25cqh, 9px);
+    padding: 0 8px clamp(4px, 1.2cqh, 9px);
+  }
+  .an-banner-globe { width: clamp(31px, 8cqh, 53px); }
+  .an-banner-earth { font-size: clamp(24px, 6cqh, 39px); }
+  .an-banner-brand p { font-size: clamp(12px, 2.9cqh, 19px); }
+  .an-banner-message { gap: clamp(3px, 1cqh, 8px); }
+  .an-banner-message h1 { font-size: clamp(14px, 3.3cqh, 22px); text-align: center; }
+  .an-banner-message blockquote {
+    padding: clamp(5px, 1.5cqh, 11px);
+    font-size: clamp(10px, min(3.55vw, 2.25cqh), 17px);
+  }
+  #app .an-banner-signature {
+    display: block;
+    margin: 3px 2px 0 0;
+    color: #ffc176;
+    font: italic 500 clamp(12px, 2.8cqh, 21px)/1.1 "Segoe Script", "Brush Script MT", cursive;
+    text-align: right;
+  }
+  .an-banner-destinations { min-height: 0; padding-left: 0; border-left: 0; gap: clamp(2px, .85cqh, 6px); }
+  .an-banner-destinations h2 { font-size: clamp(9px, 2.05cqh, 13px); }
+  .an-banner-destinations small { font-size: clamp(8px, 1.45cqh, 10px); }
+  .an-banner-flags-mobile {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 285px;
+    grid-auto-rows: minmax(0, 1fr);
+    gap: clamp(1px, .65cqh, 4px);
+  }
+  .an-banner-flags-mobile .an2-native-cloth-flag {
+    height: 100%;
+    width: auto;
+    max-width: min(100%, 43px);
+  }
+  .an-banner-founder { min-height: 0; }
+  .an-banner-portrait { min-height: 0; max-height: 100%; }
+  .an-banner-founder figcaption { flex: none; gap: clamp(1px, .6cqh, 4px); }
+  .an-banner-founder figcaption strong { font-size: clamp(9px, 1.9cqh, 13px); }
+  .an-banner-founder figcaption span { font-size: clamp(8px, 1.75cqh, 11px); }
+  .an-banner-portfolio { min-height: clamp(19px, 4.2cqh, 28px); }
+  .an-banner-actions { grid-template-columns: .85fr 1fr; padding-top: clamp(4px, 1.45cqh, 9px); }
+  .an-banner-actions p { display: none; }
+  .an-banner-actions a {
+    min-height: clamp(32px, 7.5cqh, 48px);
+    font-size: clamp(10px, 2.2cqh, 13px);
+  }
+
+  html:has(body.an-about-details-mode),
+  html body.an-about-details-mode {
+    height: 100dvh !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  html body.an-about-details-mode {
+    display: flex !important;
+    flex-direction: column;
+  }
+  html body.an-about-details-mode > #an-site-header-space { display: none !important; }
+  html body.an-about-details-mode > :is(header.top, #an-global-ticker) {
+    position: relative !important;
+    top: auto !important;
+    flex-shrink: 0;
+  }
+  html body.an-about-details-mode > #app {
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    overflow: hidden auto !important;
+    overscroll-behavior: contain;
+    scroll-padding-top: 58px;
+  }
+  html body.an-about-details-mode #app .an2-story > .an2-nav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 55 !important;
+    padding-block: 7px !important;
+    background: #0b0e13;
+    overscroll-behavior-x: contain;
+    backdrop-filter: none;
+  }
+
+  html body.an-about-details-mode #app .an2-story > section[id] { scroll-margin-top: 4px; }
+  html body.an-about-details-mode #app .an2-story > .an2-founder-hero { display: none !important; }
+  #app .an2-mobile-overview {
+    display: block;
+    margin: 8px 0 4px;
+    padding: 8px 7px;
+    border: 1px solid #ff6500;
+    border-radius: 14px;
+    background: linear-gradient(165deg, #25150b, #101117 65%);
+    text-align: center;
+  }
+  html body.an-about-details-mode #app .an2-mobile-overview h1 {
+    margin: 0 0 4px !important;
+    color: #fff;
+    font-size: clamp(15px, 4.35vw, 21px) !important;
+    line-height: 1.15 !important;
+  }
+  .an2-mobile-overview h1 em { color: #ff6500; font-style: normal; }
+  html body.an-about-details-mode #app .an2-mobile-overview .an2-overview-intro {
+    margin: 0 auto 7px !important;
+    max-width: 58ch;
+    color: #fff;
+    font-size: clamp(10px, 2.9vw, 13px) !important;
+    line-height: 1.3 !important;
+  }
+  .an2-overview-metrics { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 5px; }
+  .an2-overview-metrics > a {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 2px;
+    padding: 5px 3px;
+    text-decoration: none;
+    border-radius: 8px;
+    background: #090b10;
+  }
+  #app #an2-story .an2-overview-metrics .an2-card-icon { width: 20px; height: 20px; color: #82caff !important; }
+  .an2-overview-metrics strong { color: #ff6500; font-size: clamp(12px, 4vw, 19px); line-height: 1.15; }
+  .an2-overview-metrics span { color: #fff; font-size: clamp(9px, 2.8vw, 12px); line-height: 1.2; }
+  .an2-overview-metrics a:nth-child(n+3) strong { font-size: clamp(11px, 3.3vw, 15px); }
+  .an2-overview-metrics a:focus-visible { outline: 2px solid #82caff; outline-offset: -2px; }
+  .an2-overview-metrics a:active { background: #20232c; }
+  #app #an2-story .an2-overview-since {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3px 6px;
+    border: 1px solid #ff6500;
+    border-radius: 999px;
+    background: #11141b;
+    color: #fff;
+    box-shadow: 0 0 8px #ff65004d;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+
+  html body.an-about-details-mode #app #an2-origins { padding: 18px clamp(12px, 4vw, 22px) !important; }
+  html body.an-about-details-mode #app #an2-origins h1 {
+    margin-bottom: 12px !important;
+    font-size: clamp(22px, 6vw, 30px) !important;
+    letter-spacing: -.45px;
+  }
+  html body.an-about-details-mode #app #an2-origins .an2-chapter-layout p {
+    margin-bottom: 10px;
+    line-height: 1.5 !important;
+  }
+
+
+  #app .an-management-page.an-about-v3 {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 0 !important;
+    padding: clamp(4px, 1.3cqh, 10px) 8px;
+  }
+  #app .an-management-page .an-management-back { margin: 0 0 4px; font-size: 12px; }
+  html body #app .an-management-page.an-about-v3 .an-about-management {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    padding: clamp(5px, 1.4cqh, 10px) !important;
+    gap: 3px !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-heading h2 {
+    margin: 0 !important;
+    font-size: clamp(15px, 4cqh, 24px) !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-card {
+    display: block !important;
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    overflow: hidden auto !important;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-role-banner {
+    margin: 2px 0 8px !important;
+    min-height: 0 !important;
+    font-size: clamp(12px, 2.1cqh, 14px) !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-main {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: start !important;
+    height: auto !important;
+    min-height: 0 !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-photo-box,
+  html body #app .an-management-page.an-about-v3 .an-manager-photo-button {
+    height: auto !important;
+    max-height: none !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-photo {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: clamp(110px, 36cqh, 230px) !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-information {
+    justify-content: flex-start !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    gap: 9px !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-white-name {
+    font-size: clamp(16px, 3.2cqh, 22px) !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-contact {
+    flex: 0 0 auto !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-controls {
+    min-height: 0 !important;
+    margin: 3px 0 0 !important;
+    padding: 4px 0 0 !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-controls > :is(button, .an-manager-counter) { display: none !important; }
+  #app .an-management-page .an-manager-pages { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  html body #app .an-management-page.an-about-v3 .an-manager-pages button {
+    width: 33px !important;
+    height: 30px !important;
+    font-size: 14px !important;
+  }
+  #app .an-management-page .an-manager-pages button[aria-current="true"] { background: #ff6500; color: #111; }
+
+}
+
+.an-manager-founder-highlights,
+.an-manager-quote-signature { display: none; }
+
+@media (max-width: 800px) {
+  html body #app .an-management-page .an-manager-heading {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    text-align: center !important;
+  }
+  html body #app .an-management-page .an-manager-heading .an-about-eyebrow {
+    font-size: 8px !important;
+  }
+  html body #app .an-management-page .an-manager-heading #an-manager-heading {
+    font-size: clamp(15px, 4.1vw, 20px) !important;
+    text-align: center !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout .an-manager-information {
+    display: contents !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout .an-manager-photo-box {
+    grid-area: 1 / 2;
+    border: 0 !important;
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout .an-manager-photo-button {
+    border: 0 !important;
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout .an-manager-photo {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+  }
+  .an-manager-founder-layout .an-manager-identity { grid-area: 1 / 1; min-width: 0; }
+  .an-manager-founder-layout .an-manager-information > :not(.an-manager-identity) { grid-column: 1 / -1; }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-name-box .an-manager-white-name {
+    font-size: clamp(13px, 4vw, 19px) !important;
+  }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-standard-career { display: none !important; }
+  .an-manager-founder-highlights { display: block; margin-top: 7px; }
+  .an-manager-academic-logos,
+  .an-manager-designations { list-style: none; margin: 0; padding: 0; }
+  .an-manager-academic-logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .an-manager-academic-logos li {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 2px;
+    padding: 3px 1px;
+    border-radius: 5px;
+    background: #fff;
+    color: #182238;
+    font-size: 8px;
+    font-weight: 850;
+  }
+  .an-manager-academic-logos img { display: block; width: 100%; height: 27px; object-fit: contain; }
+  .an-manager-designations { display: grid; gap: 3px; margin-top: 7px; font-size: 11px; line-height: 1.2; }
+  .an-manager-designations li::before { content: "✦"; color: #ff6500; margin-right: 5px; }
+  #app .an-manager-academic-note { margin: 6px 0 0; font-size: 10px; line-height: 1.2; }
+  html body #app .an-management-page .an-manager-contact.an-manager-email {
+    background: linear-gradient(125deg, #682b30, #30151a) !important;
+    border-color: #ec7777 !important;
+  }
+  html body #app .an-management-page .an-manager-contact.an-manager-whatsapp {
+    background: linear-gradient(125deg, #155542, #102d24) !important;
+    border-color: #43ba87 !important;
+  }
+  html body #app .an-management-page .an-manager-contact .an-mail { color: #ff9393 !important; fill: currentColor; }
+  html body #app .an-management-page .an-manager-contact .an-wa { color: #66e7a9 !important; fill: currentColor; }
+}
+
+@media (max-width: 800px) {
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout {
+    gap: clamp(3px, 1cqh, 6px) !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout .an-manager-photo {
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: clamp(95px, 33cqh, 220px) !important;
+    margin-inline: auto 0 !important;
+  }
+  .an-manager-founder-highlights { margin-top: 4px; }
+  .an-manager-academic-logos img { height: clamp(15px, 4.3cqh, 25px); }
+  .an-manager-designations { gap: 1px; margin-top: 4px; }
+  #app .an-manager-academic-note { margin-top: 3px; }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-quote {
+    margin: 0 !important;
+    padding: 5px 7px 5px 21px !important;
+  }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-quote blockquote {
+    font-size: clamp(10px, min(3.6vw, 2.35cqh), 15px) !important;
+    line-height: 1.25 !important;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-card:has(.an-manager-founder-layout) {
+    display: flex !important;
+    flex-direction: column;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout {
+    flex: 1 0 auto !important;
+    grid-template-rows: auto minmax(min-content, 1fr) auto auto;
+  }
+  html body #app .an-management-page.an-about-v3 .an-manager-founder-layout:has(.an-manager-career:not(.an-manager-standard-career)) {
+    grid-template-rows: auto auto minmax(min-content, 1fr) auto auto;
+  }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-quote {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch !important;
+  }
+  html body #app .an-management-page .an-manager-quote-signature {
+    display: block !important;
+    margin-top: 3px;
+    text-align: right;
+    color: #ffac68 !important;
+    font: italic 500 clamp(12px, 2.65cqh, 18px)/1.1 "Segoe Script", "Brush Script MT", cursive;
+  }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-contacts {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+    margin: 0 !important;
+  }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-contact {
+    min-height: clamp(28px, 5.7cqh, 39px) !important;
+    padding: 3px 5px !important;
+    gap: 4px !important;
+  }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-actions {
+    gap: 4px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body #app .an-management-page .an-manager-founder-layout .an-manager-actions .an-manager-action {
+    min-height: clamp(25px, 5.1cqh, 36px) !important;
+    padding: 3px 7px !important;
+    font-size: 9px !important;
+  }
+}
+
+/* Desktop-only About fit: preserve the original three-column grid and all mobile rules. */
+@media screen and (min-width:801px) {
+ html body.an-about-banner-mode {height:100dvh;min-height:0;overflow:hidden;display:flex;flex-direction:column}
+ html body.an-about-banner-mode > #app {flex:1 1 0;min-height:0;overflow:hidden;display:flex;container-type:size}
+ html body.an-about-banner-mode #app .an-about-banner {height:100%;min-height:0;flex:1 1 0}
+ html body.an-about-banner-mode #app .an-about-art {
+  height:100%;min-height:0;
+  grid-template:"brand brand portrait" auto "message flags portrait" minmax(0,1fr) "actions actions actions" auto / minmax(0,1.9fr) minmax(0,.83fr) minmax(0,.92fr);
+  gap:clamp(5px,1cqh,10px);padding-bottom:clamp(5px,.8cqh,9px)
+ }
+ html body.an-about-banner-mode #app .an-banner-message {min-height:0;gap:clamp(3px,.7cqh,7px)}
+ html body.an-about-banner-mode #app .an-banner-message h1 {
+  font-size:clamp(19px,3.4cqh,32px);text-align:center;line-height:1.06
+ }
+ html body.an-about-banner-mode #app .an-banner-message blockquote {
+  flex:1 1 0;min-height:0;display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(8px,1.3cqh,15px);font-size:clamp(15px,min(1.55vw,2.8cqh),25px);line-height:1.19
+ }
+ html body.an-about-banner-mode #app .an-banner-signature {
+  display:block;margin:clamp(5px,1cqh,10px) 4px 0 0;
+  color:#ffac68;text-align:right;
+  font:italic 500 clamp(16px,2.6cqh,25px)/1.1 "Segoe Script","Brush Script MT",cursive
+ }
+ html body.an-about-banner-mode #app .an-banner-actions {
+  padding-top:clamp(4px,.7cqh,8px);align-self:end
+ }
+ html body.an-about-banner-mode #app .an-banner-actions a {
+  min-height:clamp(34px,5.6cqh,52px);padding:.25em .6em
+ }
+ html body.an-about-banner-mode #app .an-banner-earth {
+  animation:an-desktop-earth-round 7s linear infinite;transform-origin:center
+ }
+ @keyframes an-desktop-earth-round {to{transform:rotate(360deg)}}
+}
+
+/* Desktop About Us recovery: isolate grid and icon from inherited overrides. Phone rules untouched. */
+@media screen and (min-width:801px) {
+ html body.an-about-banner-mode #app .an-about-art {display:grid!important;grid-template-areas:"brand brand portrait" "message flags portrait" "actions actions actions"!important;grid-template-columns:minmax(0,1.9fr) minmax(0,.83fr) minmax(0,.92fr)!important;grid-template-rows:auto minmax(0,1fr) auto!important;align-items:stretch!important;overflow:hidden!important;}
+ html body.an-about-banner-mode #app .an-banner-brand {grid-area:brand!important;min-width:0!important;position:relative!important;}
+ html body.an-about-banner-mode #app .an-banner-message {grid-area:message!important;min-width:0!important;min-height:0!important;position:relative!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;}
+ html body.an-about-banner-mode #app .an-banner-message blockquote {min-width:0!important;max-width:100%!important;overflow:hidden!important;overflow-wrap:break-word!important;}
+ html body.an-about-banner-mode #app .an-banner-destinations {grid-area:flags!important;min-width:0!important;min-height:0!important;position:relative!important;overflow:hidden!important;}
+ html body.an-about-banner-mode #app .an-banner-founder {grid-area:portrait!important;min-width:0!important;min-height:0!important;position:relative!important;overflow:hidden!important;}
+ html body.an-about-banner-mode #app .an-banner-actions {grid-area:actions!important;display:grid!important;grid-template-columns:1fr 1.18fr 1fr!important;min-width:0!important;position:relative!important;}
+ html body.an-about-banner-mode #app .an-banner-actions a.an-banner-team {display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;flex-wrap:nowrap!important;gap:5px!important;white-space:nowrap!important;min-width:0!important;}
+ html body.an-about-banner-mode #app .an-banner-actions a.an-banner-team > svg {display:block!important;position:static!important;inset:auto!important;width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;max-width:18px!important;max-height:18px!important;flex:0 0 18px!important;transform:none!important;stroke:#fff!important;}
+ html body.an-about-banner-mode #app .an-banner-actions a.an-banner-team .an-management-label {display:inline-flex!important;flex-direction:row!important;align-items:center!important;flex-wrap:nowrap!important;white-space:nowrap!important;min-width:0!important;font-size:clamp(11px,1.25vw,18px)!important;}
+ html body.an-about-banner-mode #app .an-banner-actions a.an-banner-team .an-management-label span {display:inline!important;font-size:inherit!important;white-space:nowrap!important;}
+ html body.an-about-banner-mode #app .an-banner-actions a.an-banner-team .an-management-orange {color:#ff7900!important;}
+ html body.an-about-banner-mode #app .an-banner-actions a.an-banner-team .an-management-white {color:#fff!important;}
+}
+
+/* Desktop-only founder text and tapered handwritten signature flourish. */
+@media screen and (min-width:801px){
+ html body.an-about-banner-mode #app .an-banner-message blockquote {font-size:clamp(19px,min(1.85vw,3.65cqh),31px)!important;line-height:1.22!important;}
+ html body.an-about-banner-mode #app .an-banner-message .an-banner-signature {display:block!important;position:relative!important;align-self:flex-end!important;width:max-content!important;max-width:95%!important;margin:12px 5px 0 auto!important;padding:0 2px 12px!important;border:0!important;text-decoration:none!important;transform:rotate(-5deg)!important;transform-origin:right center!important;}
+ html body.an-about-banner-mode #app .an-banner-message .an-banner-signature::after {content:""!important;display:block!important;position:absolute!important;left:4%!important;right:0!important;bottom:0!important;height:12px!important;background:#ff8b32!important;clip-path:polygon(0 86%,5% 55%,22% 32%,45% 19%,68% 17%,87% 28%,100% 60%,91% 45%,71% 35%,47% 38%,24% 54%,8% 83%,0 100%)!important;transform:rotate(-2deg)!important;}
+}
+
+/* Desktop quote alignment only; preserve typography, box, signature and mobile. */
+@media screen and (min-width:801px){
+ html body.an-about-banner-mode #app .an-banner-message blockquote {text-align:center!important;}
+}
+
+/* Desktop About: display the exact mobile artwork flag crops as waving cloth.
+   No mobile selectors or other About elements are changed. */
+@media (min-width: 801px) {
+  .an-banner-destinations .an-banner-flags-desktop {
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    grid-auto-rows: auto;
+    align-content: center;
+    justify-items: center;
+    gap: clamp(3px,.55vh,7px) clamp(3px,.4vw,8px);
+  }
+  .an-banner-destinations .an-banner-flags-desktop .an2-native-cloth-flag {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 46px;
+    height: auto;
+    min-height: 12px;
+    background-repeat: no-repeat;
+    transform-origin: left center;
+    border-radius: 2px;
+  }
+}
+@media (min-width: 801px) and (prefers-reduced-motion: no-preference) {
+  .an-banner-destinations .an-banner-flags-desktop .an2-native-cloth-flag {
+    animation: anAboutFlagCloth var(--wave-duration,3s) ease-in-out infinite;
+    animation-delay: var(--wave-delay,0s);
+  }
+}
+
+/* Desktop-only founder controls: match the existing mobile labels and blue CTA. */
+@media (min-width: 801px) {
+  .an-banner-founder figcaption .an-banner-founder-role {
+    text-transform: uppercase;
+  }
+  .an-banner-founder figcaption .an-banner-portfolio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .35em;
+    width: max-content;
+    max-width: 100%;
+    min-height: 32px;
+    margin-top: 3px;
+    padding: 5px 13px;
+    border: 1px solid #559eea;
+    border-radius: 99px;
+    background: linear-gradient(#215fa5,#103669);
+    color: #fff;
+    font-size: clamp(11px,1vw,15px);
+    font-weight: 750;
+    line-height: 1.15;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .an-banner-founder figcaption .an-banner-portfolio i { font-style: normal; }
+  .an-banner-founder figcaption .an-banner-portfolio:focus-visible {
+    outline: 2px solid #a2d7ff;
+    outline-offset: 2px;
+  }
+}
+
+/* Desktop only: feather the rectangular edges of the founder artwork into the page.
+   Preserve the central portrait and the orange glow around the map flags. */
+@media (min-width: 801px) {
+  .an-banner-founder > .an-banner-portrait {
+    -webkit-mask-image:
+      linear-gradient(to right, transparent 0%, #000 11%, #000 89%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 9%, #000 94%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, transparent 0%, #000 11%, #000 89%, transparent 100%),
+      linear-gradient(to bottom, transparent 0%, #000 9%, #000 94%, transparent 100%);
+    mask-composite: intersect;
+  }
+}

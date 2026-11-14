@@ -1,0 +1,179 @@
+/* A&N Overseas — deep accent / pure white palette, site wide.
+   Colour-only: no geometry, content, imagery, movement, or interaction changes.
+   Specific gradients and older hardcoded colours are normalized by the
+   companion stylesheet-colour pass, while retaining every original selector. */
+:root{
+  --orange:#ff7900;
+  --gold:#ffae00;
+  --ink:#ffffff;
+  --light:#ffffff;
+  --an-orange:#ff7900;
+  --an-gold:#ffae00;
+  --an-ink:#ffffff;
+  --an-white:#ffffff;
+  --an-accent:#ff7900;
+  --an-accent-strong:#ff7900;
+  --primary-orange:#ff7900;
+  --accent-orange:#ff7900;
+}
+body{color:#fff}
+::selection{background:#ff7900;color:#fff}
+:focus-visible{outline-color:#ff9500}
+
+/* Brandwide contrast: allow crisp white section headings and orange emphasis, not whole orange paragraphs. */
+#app :is(.service-detail,.an-service-detail,.service-page,.an-service-page,.an2-story) :is(h1,h2,h3){
+ color:#fff;
+}
+#app :is(.service-detail,.an-service-detail,.service-page,.an-service-page) p{color:#f6f6f6}
+#app :is(.service-detail,.an-service-detail,.service-page,.an-service-page) :is(em,.highlight,.key-point,.accent){
+ color:#ff9400;
+}
+#app :is(.service-detail,.an-service-detail,.service-page,.an-service-page) :is(a.btn,button.primary,.primary-btn){
+ background:linear-gradient(100deg,#ffab23,#ff7900);border-color:#ffa937;color:#150d08;
+}
+.an-updates-bar .an-updates-label{
+ background:linear-gradient(115deg,#16304b,#225a81)!important;
+ color:#fff!important;border-right:2px solid #ff8d1a!important;
+ box-shadow:inset 0 -2px rgba(255,255,255,.09)!important;
+}
+.an-updates-bar .an-updates-window{
+ background:#080d15!important;
+}
+.an-updates-bar .an-update-item{color:#fff4e8!important}
+.an-updates-bar .an-update-item :is(b,strong){color:#ff9d19!important}
+
+
+/* Light orange / white hierarchy, on the existing components and breakpoints. */
+:root {
+  --an-theme-light: hsl(28 100% 50%);
+  --an-theme-orange: hsl(27 100% 52%);
+  --an-theme-key: hsl(26 100% 54%);
+  --an-theme-fade: hsl(29 100% 70% / .34);
+}
+body .brand :is(strong,.brand-title,.an-brand-name) { color:var(--an-theme-light); }
+
+#app :is(.page-head,.hero) h1 {
+  color:var(--an-theme-light);
+}
+#app .an-directory-heading h1 { color:white; }
+#app .an-directory-heading h1 > span { color:var(--an-theme-light); }
+#app :is(.page-head,.hero) h1 .gradient {
+  color:white;
+  -webkit-text-fill-color:white;
+}
+#app :is(.an-about-fixed,.an2-story,.an-scholarship-detail,.an-portfolio-v2) :is(h1,h2,h3) .an-light {
+  color:white;
+}
+body.an-portfolio-v2 #app .page-head h1,
+#app :is(.university-fullname,.uni-card h3,.an-manager-card h3) {
+  color:var(--an-theme-light)!important;
+}
+#app :is(.an-about-fixed,.an2-story,.an-scholarship-detail,.an-scholarship-card,
+ .university-catalogue,#university-panel,.sidebar,.an-service-detail,.service-detail) :is(p,li,dd) {
+  font-weight:550;
+}
+#app :is(.an2-story,.an-scholarship-detail,#university-panel,.an-service-detail,.service-detail) :is(p,li,dd) :is(strong,.key-point,.highlight),
+#app :is(.profile-facts,.an-scholarship-facts) :is(dt,b,strong),
+#app #catalogue-count strong {
+  color:var(--an-theme-key);
+  font-weight:700;
+}
+#app :is(.uni-card,.an-scholarship-card,.an2-about-box,.an-vision-inline,.an-manager-card,.profile-facts) {
+  border-color:var(--an-theme-fade);
+}
+#app :is(a.btn,button.btn):not(.outline,.soft,.danger,.success) {
+  background-image:linear-gradient(110deg,var(--an-theme-orange),hsl(24 100% 46%));
+}
+#app :is(a.btn,button.btn)[href^="#/apply"]:not(.outline),
+header a[href="#/apply"]:is(.btn,.an-apply) {
+  background-image:linear-gradient(110deg,hsl(34 100% 69%),hsl(29 100% 60%));
+  color:hsl(24 38% 10%);
+}
+@media (hover:hover) {
+  #app :is(a.btn,button.btn,.tab,.card-open):not(:disabled):hover,
+  header .links a:hover {
+    border-color:var(--an-theme-orange);
+  }
+}
+
+
+/* Inner application routes share the same colors as the public directory. */
+#app .page-head h1:has(> span) { color:white; }
+#app .page-head h1 > span { color:var(--an-theme-light); }
+
+body:is(.an-inner-application,.an-portfolio-v2,.an-scholarship-detail-view,.an-service-detail-mode) #app {
+  color:white;
+}
+body:is(.an-inner-application,.an-portfolio-v2,.an-scholarship-detail-view,.an-service-detail-mode) #app :is(
+  .white,.live-panel,.sidebar,.doccard,.apply-form-card,.apply-aside,.profile-section,
+  .profile-facts,.an-scholarship-facts,.an-scholarship-amount-panel,.an-journey-block,.an-flow-step
+) {
+  border-color:var(--an-theme-fade);
+}
+body:is(.an-inner-application,.an-portfolio-v2,.an-scholarship-detail-view,.an-service-detail-mode) #app :is(
+  .white,.live-panel,.sidebar,.apply-form-card,.apply-side-body,.profile-body,
+  .an-scholarship-detail,.an-journey,.page-head
+) :is(p,li,dd,td) {
+  color:white;
+  font-weight:550;
+}
+body:is(.an-inner-application,.an-portfolio-v2,.an-scholarship-detail-view,.an-service-detail-mode) #app :is(
+  .white,.live-panel,.sidebar,.apply-intro,.apply-form-card,.profile-section,.an-scholarship-detail,.an-journey
+) :is(h2,h3) {
+  color:var(--an-theme-light);
+}
+body:is(.an-inner-application,.an-portfolio-v2,.an-scholarship-detail-view,.an-service-detail-mode) #app :is(
+  .white,.live-panel,.apply-form-card,.profile-body,.profile-facts,.an-scholarship-detail,.an-scholarship-facts,.an-journey
+) :is(dt,th,strong,.profile-label,.an-step-label,.key-point,.highlight) {
+  color:var(--an-theme-key);
+  font-weight:700;
+}
+body.an-inner-application #app :is(.field label,.an-portal-field,.apply-label,.doccard strong) {
+  color:var(--an-theme-light);
+  font-weight:700;
+}
+body.an-inner-application #app :is(input,select,textarea):not([type=checkbox],[type=radio]) {
+  border-color:var(--an-theme-fade);
+}
+@media (hover:hover) {
+  body:is(.an-inner-application,.an-portfolio-v2,.an-scholarship-detail-view,.an-service-detail-mode) #app
+  :is(button,a.btn,[role=tab]):not(:disabled,[aria-disabled=true]):hover {
+    border-color:var(--an-theme-orange);
+  }
+}
+
+
+/* Keep the brand and primary accents vivid; reserve the softer fill for Apply. */
+html body .top .brand-copy #brand-typing,
+body.home-view #app .hero h1 { color:var(--an-theme-orange)!important; }
+body.home-view #app .hero h1 .gradient { color:white!important;-webkit-text-fill-color:white!important; }
+html body .top #links > a:is(:hover,:focus-visible,.current,[aria-current="page"]) {
+  background-color:var(--an-theme-orange)!important;
+  background-image:linear-gradient(180deg,hsl(29 100% 52%),hsl(24 100% 45%))!important;
+  border-color:var(--an-theme-orange)!important;
+}
+#app :is(.an-journey-lead,.an-journey-block,.profile-section,.an-scholarship-detail) :is(h2,h3) > span:first-child,
+#app :is(.an-flow-step,.an-scholarship-amount-panel) :is(strong,b) {
+  color:var(--an-theme-key);
+}
+#app :is(.an-journey,.profile-body,.an-scholarship-detail,.live-panel) thead th {
+  color:var(--an-theme-light);
+  border-color:var(--an-theme-fade);
+}
+@media(max-width:800px){
+  html body .top:has(#links.open) {
+    transform:none!important;filter:none!important;contain:none!important;
+  }
+  html body .top nav#links.open > a {
+    flex-direction:row!important;gap:8px!important;
+    border-color:var(--an-theme-orange)!important;
+  }
+  html body .top nav#links.open > a > .an-nav-icon {
+    display:block!important;visibility:visible!important;opacity:1!important;
+    width:16px!important;height:16px!important;flex:none!important;
+    color:var(--an-theme-orange)!important;stroke:currentColor!important;
+  }
+  html body .top nav#links.open > a:is(.current,[aria-current="page"]) > .an-nav-icon {
+    color:hsl(32 100% 74%)!important;
+  }
+}

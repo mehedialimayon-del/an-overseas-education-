@@ -1,0 +1,39 @@
+/* Secure A&N studio: warm white + deep orange on black */
+.studio-editor{border:1px solid #71421f;background:linear-gradient(130deg,#191920,#0d1015);padding:15px;border-radius:16px;margin:12px 0}
+.studio-editor .split h3{font-size:15px;color:#fff;margin:4px 0 10px}
+.studio-editor .field{font-size:12px;color:#ffd3a4}
+.studio-editor .field input,.studio-editor .field textarea{border-color:#7b512c;background:#08090c;color:#fff}
+.studio-avatar{width:92px;height:92px;border-radius:50%;border:2px solid #ff9211;object-fit:cover;display:block;margin:7px 0 14px}
+.studio-upload{border:1px dashed #ae6a29;background:#24190f;border-radius:12px;padding:11px}
+.studio-upload input[type=file]{background:transparent;border:0;padding:9px 2px;color:#fff;min-height:auto}
+.studio-upload input[type=file]::file-selector-button{background:#ff8d12;color:#111;border:0;border-radius:8px;padding:9px;margin-right:9px;font-weight:800;cursor:pointer}
+.studio-upload small{display:block;font-size:10px;color:#ffbd67;margin-top:6px}
+.studio-check{display:flex!important;align-items:flex-start;gap:10px}.studio-check input{width:19px;min-height:auto;margin:0;accent-color:#ff941a}
+.studio-media-row{display:grid;grid-template-columns:116px minmax(0,1fr);gap:11px;border-top:1px solid #493726;padding:14px 0;align-items:start}
+.studio-media-row b{font-size:13px;color:#fff}.studio-media-row p{font-size:11px;color:#c7bdaf;line-height:1.45;overflow-wrap:anywhere;white-space:pre-wrap}.studio-media-row small{color:#ffb459;font-size:10px}
+.studio-media-row .actions{grid-column:1/-1;margin-top:0}
+.studio-preview{width:116px;height:70px;border-radius:9px;background:#050505;overflow:hidden}.studio-preview img,.studio-preview video{width:100%;height:100%;object-fit:cover}
+.studio-country-preview{height:120px;width:100%;border-radius:12px;object-fit:cover;margin:7px 0}
+.studio-history-record{border-top:1px solid #50361f;padding:14px 0}.studio-history-record b{color:#fff;text-transform:capitalize}.studio-history-record small{font-size:10px;color:#f8b867;white-space:nowrap}.studio-history-record pre{max-height:180px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#08090e;border:1px solid #403628;padding:11px;color:#ddd2c5;border-radius:10px;font-size:10px}.studio-history-record details summary{color:#ffba61;cursor:pointer;font-size:12px;font-weight:750}
+@media(max-width:540px){.studio-editor{padding:12px}.studio-media-row{grid-template-columns:100px minmax(0,1fr)}.studio-preview{width:100px;height:65px}}
+
+/* Compatibility path for pre-1.1 native WebView installs */
+.studio-legacy-fallback{margin:14px 0 20px;background:linear-gradient(135deg,#2e1c0e,#15161b);
+border:1px solid #b96e24;border-radius:15px;padding:15px;box-shadow:0 9px 25px #0005}
+.studio-legacy-fallback strong{color:#ffc47e;font-size:15px}
+.studio-legacy-fallback p{color:#dfd3c4;font-size:12px;line-height:1.55;margin:8px 0 12px}
+.studio-legacy-fallback a.btn{display:inline-flex;text-decoration:none;color:#17110b;background:linear-gradient(110deg,#ffbb51,#ff8006);border:0;border-radius:10px;padding:11px 14px;font-size:12px;font-weight:850}
+
+/* Full original media: covers only in card, never change the uploaded file. */
+.studio-preview img{display:block;width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+.studio-avatar,.studio-country-preview{cursor:zoom-in}
+.an-admin-photo-dialog{position:fixed;inset:0;margin:auto;background:#080b11;color:#fff;border:1px solid #ff921a;border-radius:16px;padding:12px;max-width:96vw;max-height:94dvh;box-shadow:0 25px 100px #000e}
+.an-admin-photo-dialog::backdrop{background:#000e}
+.an-admin-photo-dialog>img{display:block;object-fit:contain;width:auto;height:auto;max-width:calc(96vw - 24px);max-height:calc(94dvh - 80px);margin:12px auto}
+.an-admin-photo-dialog [data-admin-photo-close]{display:block;margin-left:auto;background:#ff9319;color:#111;padding:8px 14px;border:0;border-radius:10px;font-weight:800;cursor:pointer}
+.studio-update-text-preview{display:grid;place-items:center;width:100%;height:100%;font-size:28px;color:#ff9219}
+
+/* Keep the admin list compact even when a full Facebook caption is saved. */
+.studio-media-row p{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-line;overflow-wrap:anywhere}
+.studio-media-row .actions{display:flex;flex-wrap:wrap;gap:8px}
+.studio-media-row .studio-preview{overflow:hidden;flex-shrink:0}

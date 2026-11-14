@@ -1,0 +1,279 @@
+/* A&N Overseas — targeted route corrections, 2026-11-06.
+   Intentionally scoped: preserves current brand, university cards,
+   original About Details article and mobile layouts. */
+
+/* ABOUT: READ MORE is for the WHOLE story, outside the Our Vision box. */
+body.an-about-locked #app .an-about-v3 .an-about-intro-panel > .an2-readmore-separate{
+  display:flex!important;visibility:visible!important;opacity:1!important;
+  flex:0 0 auto!important;position:relative!important;
+  align-items:center!important;justify-content:center!important;
+  align-self:stretch!important;width:100%!important;max-width:none!important;
+  min-height:36px!important;padding:8px 0 0!important;
+  margin:5px 0 0!important;border:0!important;
+  border-top:1px solid #78532e!important;
+}
+body.an-about-locked #app .an-about-v3 .an-about-intro-panel > .an2-readmore-separate .an-about-readmore{
+  display:inline-flex!important;visibility:visible!important;opacity:1!important;
+  position:relative!important;pointer-events:auto!important;
+  min-height:34px!important;height:auto!important;align-items:center!important;
+  justify-content:center!important;margin:0!important;padding:8px 20px!important;
+  border:1px solid #f6a443!important;border-radius:10px!important;
+  background:linear-gradient(110deg,#ffb341,#f7800a)!important;color:#191007!important;
+  font-size:11px!important;font-weight:900!important;line-height:1.2!important;
+  letter-spacing:.65px!important;text-decoration:none!important;z-index:2!important;
+}
+body.an-about-locked #app .an-about-v3 .an-about-intro-panel > .an2-readmore-separate .an-about-readmore:hover{
+  background:linear-gradient(110deg,#ffd38a,#ff9e22)!important;
+}
+@media(max-width:800px){
+  body.an-about-locked #app .an-about-v3 .an-about-intro-panel > .an2-readmore-separate{
+    margin-top:10px!important;padding-top:9px!important;
+  }
+}
+
+/* ABOUT DETAILS: restore the original full-length article and document scrolling.
+   Do not hide the content in a viewport-locked About overview shell. */
+html:has(body.an-about-details-mode){
+  height:auto!important;max-height:none!important;overflow-x:clip!important;
+  overflow-y:auto!important;
+}
+body.an-about-details-mode{
+  display:block!important;position:static!important;height:auto!important;
+  min-height:100dvh!important;max-height:none!important;
+  overflow-x:clip!important;overflow-y:visible!important;
+}
+body.an-about-details-mode > .top{position:sticky!important;top:0!important;z-index:1000!important}
+body.an-about-details-mode #app{
+  position:relative!important;display:block!important;flex:none!important;
+  width:100%!important;height:auto!important;max-height:none!important;
+  min-height:40vh!important;overflow:visible!important;visibility:visible!important;
+}
+body.an-about-details-mode #app > .an2-story{
+  position:relative!important;display:block!important;visibility:visible!important;
+  opacity:1!important;height:auto!important;min-height:0!important;max-height:none!important;
+  overflow:visible!important;
+}
+body.an-about-details-mode #app .an2-story-chapter{scroll-margin-top:125px}
+
+/* COUNTRY: always show what the academic-funding shortcut does. */
+#app .an-country-hero-tools .an-country-cta-copy{
+  display:flex!important;flex-direction:column!important;gap:3px!important;
+  min-width:0!important;flex:1 1 auto!important;
+}
+#app .an-country-hero-tools .an-country-cta-copy small{
+  display:block!important;visibility:visible!important;opacity:1!important;
+  font-size:clamp(9px,.83vw,11px)!important;line-height:1.35!important;
+  color:#592e14!important;white-space:normal!important;
+  max-height:none!important;overflow:visible!important;
+}
+#app .an-country-hero-tools .an-country-scholarship-cta{
+  height:auto!important;min-height:57px!important;padding:7px 10px!important;overflow:visible!important;
+}
+@media(max-width:800px){
+ #app .an-country-hero-tools .an-country-cta-copy small{
+   font-size:10px!important;line-height:1.3!important;
+ }
+}
+
+/* SCHOLARSHIP DIRECTORY: top heading and filters are compact.
+   The FOUR FEATURED CARDS scroll with all content below them.
+   Only the filtering row remains pinned above that scroll area. */
+@media(min-width:801px){
+  html:has(body.an-scholarships-mode){
+    height:100%!important;overflow:hidden!important;
+  }
+  body.an-scholarships-mode{
+    display:flex!important;flex-direction:column!important;
+    height:100vh!important;height:100dvh!important;
+    min-height:0!important;max-height:100dvh!important;overflow:hidden!important;
+  }
+  body.an-scholarships-mode > .top,
+  body.an-scholarships-mode > .an-updates-bar{
+    position:relative!important;top:auto!important;flex:0 0 auto!important;
+  }
+  body.an-scholarships-mode > #app{
+    flex:1 1 0!important;min-height:0!important;height:auto!important;
+    display:flex!important;flex-direction:column!important;overflow:hidden!important;
+  }
+  body.an-scholarships-mode #app > .an-scholarship-head{
+    flex:0 0 auto!important;padding:5px 0 6px!important;
+  }
+  body.an-scholarships-mode #app .an-scholarship-head h1{
+    font-size:clamp(19px,2vw,26px)!important;margin:2px 0!important;
+  }
+  body.an-scholarships-mode #app > .an-scholarship-directory{
+    display:block!important;flex:1 1 0!important;min-height:0!important;
+    height:auto!important;max-height:none!important;overflow-x:hidden!important;
+    overflow-y:auto!important;overscroll-behavior-y:contain!important;
+    scrollbar-width:thin;scrollbar-color:#ba7532 #13161b;
+    -webkit-overflow-scrolling:touch;scroll-padding-top:69px;
+    width:100%!important;max-width:1230px!important;
+    padding-top:0!important;padding-bottom:55px!important;
+  }
+  body.an-scholarships-mode #app .an-scholarship-filters{
+    position:sticky!important;top:0!important;z-index:30!important;
+    margin:0 0 8px!important;padding:7px 0 9px!important;
+    background:linear-gradient(#0b1018 92%,#0b101800)!important;
+    border-bottom:1px solid #85562e!important;
+  }
+  body.an-scholarships-mode #app .an-scholarship-filters label{
+    gap:3px!important;font-size:9px!important;
+  }
+  body.an-scholarships-mode #app .an-scholarship-filters input,
+  body.an-scholarships-mode #app .an-scholarship-filters select{
+    min-height:35px!important;padding:7px 10px!important;
+  }
+  body.an-scholarships-mode #app .an-feature-grid{
+    position:static!important;overflow:visible!important;
+  }
+  body.an-scholarships-mode > .footer{display:none!important}
+}
+
+/* HUB: both post columns scroll independently irrespective of post count.
+   Avoid clipping growing sets of posts. */
+body.an-community-mode #app .an-community-panel{
+  min-height:0!important;
+}
+body.an-community-mode #app .an-community-scroll{
+  min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;
+  overscroll-behavior-y:contain!important;-webkit-overflow-scrolling:touch!important;
+  scrollbar-gutter:stable;
+}
+body.an-community-mode #app .an-community-grid,
+body.an-community-mode #app .an-youtube-grid{
+  height:auto!important;max-height:none!important;
+  align-content:start!important;
+}
+
+/* CONTACT: readable premium layout and clear submission feedback. */
+body.an-contact-mode #app .an-contact-content{
+  padding-top:18px!important;padding-bottom:72px!important;
+}
+body.an-contact-mode #app .an-contact-office,
+body.an-contact-mode #app .an-contact-enquiry{
+  border-color:#8f5b32!important;
+}
+body.an-contact-mode #app .an-contact-feedback{
+  color:#ffd49f;line-height:1.45;font-size:12px;
+  margin:10px 0 0;min-height:18px;
+}
+@media(max-width:800px){
+ body.an-contact-mode #app .an-contact-content{padding-top:12px!important}
+}
+
+/* CONTACT PAGE — premium two-column office and enquiry layout.
+   Landmark photographs are labelled as CITY views, never office-building photos. */
+body.an-contact-mode #app .an-contact-head{
+  background:radial-gradient(ellipse at 86% 10%,#ff8a171c,transparent 50%),#10131a;
+  padding:22px 0 17px!important;border-bottom:1px solid #754b28;
+}
+body.an-contact-mode #app .an-contact-head h1{
+  font-size:clamp(27px,3vw,40px)!important;margin:6px 0!important;color:#fff;
+}
+body.an-contact-mode #app .an-contact-head h1 span{color:#ffa33c!important}
+body.an-contact-mode #app .an-contact-head p{font-size:13px;color:#e1d9d0}
+body.an-contact-mode #app .an-contact-main{
+  display:grid!important;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr)!important;
+  gap:20px!important;align-items:start!important;
+}
+body.an-contact-mode #app .an-contact-offices,
+body.an-contact-mode #app .an-contact-enquiry{
+  min-width:0;padding:22px;background:linear-gradient(145deg,#1b1e25,#0e1118 77%);
+  border:1px solid #85532a;border-radius:17px;box-shadow:0 14px 35px #0005;
+}
+body.an-contact-mode #app .an-contact-offices h2,
+body.an-contact-mode #app .an-contact-enquiry h2{
+  font-size:clamp(21px,2vw,29px);color:#fff;margin:0 0 18px;line-height:1.15;
+}
+body.an-contact-mode #app .an-contact-offices h2 span,
+body.an-contact-mode #app .an-contact-enquiry h2 span{color:#ffae51}
+body.an-contact-mode #app .an-contact-office-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+}
+body.an-contact-mode #app .an-contact-office{
+  min-width:0;overflow:hidden;border:1px solid #74502e;
+  border-radius:13px;background:#141820;padding:0 0 12px;
+}
+body.an-contact-mode #app .an-contact-office-photo{
+  height:126px;position:relative;background-color:#283044;background-position:center;
+  background-size:cover;display:flex;align-items:end;isolation:isolate;overflow:hidden;
+}
+body.an-contact-mode #app .an-contact-office-photo:before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(0deg,#070a11e6,transparent 76%);
+}
+body.an-contact-mode #app .an-contact-office--kl .an-contact-office-photo{
+  background-image:url("assets/malaysia-skyline-clean.jpg");
+}
+body.an-contact-mode #app .an-contact-office--rangpur .an-contact-office-photo{
+  background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Rangpur_town_hall.jpg?width=900");
+}
+body.an-contact-mode #app .an-contact-office-photo span{
+  display:block;color:#fff;font-size:9px;letter-spacing:1px;font-weight:900;
+  padding:10px;text-shadow:0 1px 4px #000;
+}
+body.an-contact-mode #app .an-contact-office b{
+  display:block;margin:12px 11px 4px;font-size:14px;color:#fff;
+}
+body.an-contact-mode #app .an-contact-office b span{color:#ffb55a}
+body.an-contact-mode #app .an-contact-office p{
+  min-height:36px;margin:5px 11px 8px;color:#d2d6de;font-size:12px;line-height:1.45;
+  overflow-wrap:anywhere;
+}
+body.an-contact-mode #app .an-contact-map{
+  display:inline-flex;margin:0 11px;padding:7px 9px;border:1px solid #bc823e;
+  border-radius:8px;font-size:10px;font-weight:800;color:#ffe1ad!important;
+  background:#3b270f;text-decoration:none;line-height:1.3;
+}
+body.an-contact-mode #app .an-contact-map:hover{background:#78410e;color:#fff!important}
+body.an-contact-mode #app .an-contact-photo-credit{
+  display:block;margin:8px 11px 0;font-size:8px;line-height:1.45;color:#c0b1a6;
+}
+body.an-contact-mode #app .an-contact-photo-credit a{text-decoration:underline;color:#ffcc95}
+body.an-contact-mode #app .an-contact-social{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:17px 0 10px;
+}
+body.an-contact-mode #app .an-contact-social a{
+  display:inline-flex;align-items:center;gap:7px;justify-content:center;
+  border:1px solid #8f6335;background:#2a2018;
+  color:#f6e6d5;border-radius:9px;min-height:39px;min-width:45px;
+  padding:8px 11px;font-size:17px;font-weight:800;text-decoration:none;
+}
+body.an-contact-mode #app .an-contact-social a small{font-size:10px;color:#ffd3a5}
+body.an-contact-mode #app .an-contact-social a.an-social-unset{
+  opacity:.38;cursor:not-allowed;pointer-events:none;
+}
+body.an-contact-mode #app .an-contact-social a:not(.an-social-unset):hover{
+  border-color:#ffbb73;background:#4a2c15;
+}
+body.an-contact-mode #app .an-contact-email{
+  display:inline-flex;align-items:center;gap:7px;color:#ffca88!important;
+  font-weight:750;font-size:12px;overflow-wrap:anywhere;padding:8px 0;
+}
+body.an-contact-mode #app .an-contact-fields{display:grid;gap:13px}
+body.an-contact-mode #app .an-contact-fields label{
+  display:flex;flex-direction:column;gap:5px;color:#eac29a;
+  font-size:12px;font-weight:800;
+}
+body.an-contact-mode #app .an-contact-fields input,
+body.an-contact-mode #app .an-contact-fields textarea{
+  display:block;width:100%;box-sizing:border-box;min-height:43px;
+  padding:11px 12px;border:1px solid #7e6247;border-radius:10px;
+  color:#fff;background:#11161d;outline-offset:1px;
+  font-size:14px;font-weight:500;
+}
+body.an-contact-mode #app .an-contact-fields textarea{
+  min-height:118px;resize:vertical;
+}
+body.an-contact-mode #app .an-contact-fields input:focus,
+body.an-contact-mode #app .an-contact-fields textarea:focus{border-color:#ffaa53}
+body.an-contact-mode #app .an-contact-enquiry button[type=submit]{margin-top:15px;width:100%;min-height:45px}
+@media(max-width:800px){
+  body.an-contact-mode #app .an-contact-main{grid-template-columns:1fr!important;gap:14px!important}
+  body.an-contact-mode #app .an-contact-offices,
+  body.an-contact-mode #app .an-contact-enquiry{padding:17px!important}
+}
+@media(max-width:430px){
+  body.an-contact-mode #app .an-contact-office-grid{grid-template-columns:1fr}
+  body.an-contact-mode #app .an-contact-office-photo{height:128px}
+}
