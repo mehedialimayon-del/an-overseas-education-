@@ -1,0 +1,44 @@
+name: Publish A&N Overseas independently
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout deployment repository
+        uses: actions/checkout@v4
+      - name: Fetch original A&N website (read only)
+        run: |
+          git clone --depth 1 https://github.com/mehedialimayon-del/salesman-performance-app.git /tmp/fieldforce-source
+          mkdir -p site
+          cp -a /tmp/fieldforce-source/an-overseas/. site/
+      - name: Adapt only deployment URLs and PWA scope
+        shell: python
+        run: |
+          from pathlib import Path
+          root=Path('site')
+          old='https://mehedialimayon-del.github.io/salesman-performance-app/an-overseas/'
+          new='https://anoverseaseducation.com/'
+          oldpath='/salesman-performance-app/an-overseas/'
+          for p in root.rglob('*'):
+              if not p.is_file() or p.suffix.lower() not in {'.html','.js','.css','.json','.webmanifest','.md'}:
+                  continue
+              try:
+                  text=p.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              updated=text.replace(old,new).replace(oldpath,'/')
+              if updated!=text:
+                  p.write_text(updated,encoding='utf-8')
+          (root/'CNAME').write_text('anoverseaseducation.com\n',encoding='utf-8')
+          (root/'.nojekyll').touch()
+      - name: Publish site to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          cname: anoverseaseducation.com
