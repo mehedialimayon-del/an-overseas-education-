@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-11-15T12:38:31.361218+00:00",
+  "target_universities": 6210,
+  "target_scholarships": 92,
+  "audit_scope": "Source asset presence and basic content markers only",
+  "fully_verified_universities": null,
+  "verified_programme_fees": null,
+  "verified_deadlines": null,
+  "verified_intakes": null,
+  "warning": "Targets are not completion counts. A file existing does not establish that any university record is complete.",
+  "assets": {
+    "university_directory": {
+      "present": true,
+      "bytes": 14635,
+      "mentions_verification": true
+    },
+    "university_portfolio": {
+      "present": true,
+      "bytes": 23571,
+      "mentions_verification": true
+    },
+    "eligibility_interface": {
+      "present": true,
+      "bytes": 43985,
+      "mentions_verification": true
+    },
+    "eligibility_rules": {
+      "present": true,
+      "bytes": 9504,
+      "mentions_verification": true
+    }
+  }
+}
