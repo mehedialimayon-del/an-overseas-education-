@@ -1,0 +1,73 @@
+[
+  {
+    "university_name": "Universiti Malaya",
+    "country": "Malaysia",
+    "topic": "Postgraduate application windows",
+    "audience": "Malaysian and international applicants",
+    "verified_on": "2026-11-15",
+    "official_source": "https://study.um.edu.my/how-to-apply",
+    "facts": [
+      {
+        "programme_scope": "Master/Doctorate by research, conventional",
+        "application_open": "2026-04-27",
+        "application_deadline": "2026-11-22",
+        "note": "International and Malaysian; programme availability must be checked individually"
+      },
+      {
+        "programme_scope": "Master/Doctorate coursework or mixed mode, March 2027 intake",
+        "application_open": "2026-09-07",
+        "application_deadline": "2027-01-30",
+        "note": "International and Malaysian; conventional and ODL, programme dependent"
+      },
+      {
+        "programme_scope": "Selected clinical Master's programmes, June 2027 intake",
+        "application_open": "2026-07-20",
+        "application_deadline": "2027-01-31",
+        "note": "Specific Faculty of Medicine programmes only"
+      }
+    ],
+    "international_application_fee": {
+      "amount": 500,
+      "currency": "MYR",
+      "basis": "per application",
+      "source": "https://study.um.edu.my/how-to-apply"
+    },
+    "disclaimer": "Admission and programme eligibility are not guaranteed. Check the named programme before applying."
+  },
+  {
+    "university_name": "Universiti Teknologi PETRONAS",
+    "country": "Malaysia",
+    "topic": "International postgraduate tuition examples",
+    "verified_on": "2026-11-15",
+    "official_source": "https://www.utp.edu.my/Pages/Admission/Postgraduate/International-Applicants/Tuition-fees.aspx",
+    "facts": [
+      {
+        "programme": "MBA in Energy Management",
+        "study_mode": "Conventional",
+        "international_tuition_myr": 43900
+      },
+      {
+        "programme": "MSc in Asset Management & Maintenance",
+        "study_mode": "Conventional",
+        "international_tuition_myr": 38600
+      },
+      {
+        "programme": "MSc in Applied Computing",
+        "study_mode": "Conventional",
+        "international_tuition_myr": 37150
+      },
+      {
+        "programme": "MSc in Data Science",
+        "study_mode": "Open Distance Learning",
+        "international_tuition_myr": 30650
+      }
+    ],
+    "international_application_fee": {
+      "amount": 200,
+      "currency": "MYR",
+      "basis": "processing fee",
+      "source": "https://www.utp.edu.my/Pages/Admission/Postgraduate/International-Applicants/Tuition-fees.aspx"
+    },
+    "disclaimer": "UTP page states fee tables effective from January 2020; historical published rates, not a guarantee of the 2027 payable amount. Confirm current offer invoice."
+  }
+]
