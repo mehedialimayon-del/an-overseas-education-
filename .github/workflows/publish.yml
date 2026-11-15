@@ -42,7 +42,9 @@ jobs:
             cp -a overrides/. site/
           fi
       - name: Generate conservative university data-quality inventory
-        run: python3 scripts/audit_university_assets.py
+        run: |
+          python3 scripts/audit_university_assets.py
+          python3 scripts/validate_university_programmes.py
       - name: Publish site to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
