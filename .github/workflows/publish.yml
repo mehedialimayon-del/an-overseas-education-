@@ -41,6 +41,10 @@ jobs:
           if [ -d overrides ]; then
             cp -a overrides/. site/
           fi
+      - name: Publish independently sourced admissions examples
+        run: |
+          mkdir -p site/data
+          cp data/official-admissions-samples.json site/data/official-admissions-samples.json
       - name: Generate conservative university data-quality inventory
         run: |
           python3 scripts/audit_university_assets.py
