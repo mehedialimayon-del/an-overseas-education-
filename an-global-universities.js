@@ -18,6 +18,15 @@ const grouped={
 };
 const aliases={'United States of America':'United States',USA:'United States','Republic of Korea':'South Korea','Korea, Republic of':'South Korea','Korea (South)':'South Korea',Turkiye:'Turkey',Türkiye:'Turkey'};
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/gi,'').toLowerCase();
+// Keep the established profile IDs for Sapporo Gakuin and Toho Gakuen.
+// These two distinct domains otherwise produce the same IDs after punctuation is stripped.
+const directoryIdOverrides={
+ 'sg-u.ac.jp':'an-h-dir-japan-shikoku-christian-college',
+ 'toho-music.ac.jp':'an-h-dir-japan-toho-college-of-music'
+};
+function directoryId(country,hostname){
+ return directoryIdOverrides[hostname.replace(/^www\./,'')]||'an-h-dir-'+norm(country)+'-'+norm(hostname);
+}
 const seeds=[];
 Object.keys(grouped).forEach(country=>grouped[country].split(';').forEach(entry=>{
  const [name,domain]=entry.split('|');if(!name||!domain)return;
@@ -56,7 +65,7 @@ function loadLocalSnapshot(){
     const [name,country,city,site]=row;
     if(!name||!country||!site)return;
     let hostname;try{hostname=new URL(site).hostname;}catch{return;}
-    items.push({id:'an-h-dir-'+norm(country)+'-'+norm(hostname),name,short:name,country,
+    items.push({id:directoryId(country,hostname),name,short:name,country,
       city:city||country,kind:'University',programs:[],site,photo:'',
       source:'Hipo public university domains list (recognition unverified)'});
    });
@@ -101,7 +110,7 @@ async function loadPublicDirectory(){
      // Asian University / Asian University of Science and Technology are aliases of one institution
      // formally closed in August 2017. Do not offer new admissions to defunct institutions.
      if(country==='Thailand'&&/^Asian University(?: of Science and Technology)?$/i.test(name))return;
-     items.push({id:'an-h-dir-'+norm(country)+'-'+norm(new URL(site).hostname),name,short:name,country,city:row['state-province']||country,kind:'University',programs:[],site,photo:'',source:'Hipo directory (unverified recognition)'});
+     items.push({id:directoryId(country,new URL(site).hostname),name,short:name,country,city:row['state-province']||country,kind:'University',programs:[],site,photo:'',source:'Hipo directory (unverified recognition)'});
     });
     const added=addUnique(U,items);loaded=true;
     window.ANWorldDirectoryStatus={source:'Hipo open directory',added,records:rows.length};
