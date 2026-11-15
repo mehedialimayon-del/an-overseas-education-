@@ -36,6 +36,8 @@ jobs:
                   p.write_text(updated,encoding='utf-8')
           (root/'CNAME').write_text('anoverseaseducation.com\n',encoding='utf-8')
           (root/'.nojekyll').touch()
+      - name: Generate conservative university data-quality inventory
+        run: python3 scripts/audit_university_assets.py
       - name: Publish site to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
