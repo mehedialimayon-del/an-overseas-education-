@@ -53,6 +53,25 @@ jobs:
         run: |
           cp robots.txt site/robots.txt
           cp sitemap.xml site/sitemap.xml
+      - name: Validate SEO deployment assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          import re
+          root = Path('site')
+          html = (root / 'index.html').read_text(encoding='utf-8')
+          robots = (root / 'robots.txt').read_text(encoding='utf-8')
+          sitemap = root / 'sitemap.xml'
+          assert sitemap.is_file(), 'Missing deployed sitemap.xml'
+          urls = [node.text for node in ET.parse(sitemap).iter() if node.tag.endswith('}loc') or node.tag == 'loc']
+          assert 'https://anoverseaseducation.com/' in urls, 'Canonical home URL missing from sitemap'
+          assert 'Sitemap: https://anoverseaseducation.com/sitemap.xml' in robots
+          assert re.search(r'<meta[^>]+name=["\\']viewport["\\']', html, re.I), 'Mobile viewport missing'
+          assert 'https://anoverseaseducation.com/' in html, 'Canonical domain missing'
+          assert re.search(r'<title>[^<]+</title>', html, re.I), 'HTML title missing'
+          print('SEO deployment asset validation passed')
+          PY
       - name: Publish site to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
