@@ -49,6 +49,10 @@ jobs:
         run: |
           python3 scripts/audit_university_assets.py
           python3 scripts/validate_university_programmes.py
+      - name: Publish crawler configuration
+        run: |
+          cp robots.txt site/robots.txt
+          cp sitemap.xml site/sitemap.xml
       - name: Publish site to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
